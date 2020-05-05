@@ -1,0 +1,219 @@
+@charset "utf-8";
+
+body{
+	background-attachment: fixed;
+	color: #222222;
+	font-family: georgia, times, serif;
+	font-size: 1.2rem;
+	line-height: 1.1em;
+	margin: 0;
+	background-color: #E4E5DF;
+	background-position: center;
+	width: 100%;
+	
+}
+
+h1{
+	font-size: 2rem;
+	line-height: 1.3em;
+}
+
+p{
+	margin-bottom: 1.0em;
+}
+
+.contenedor{
+	width: 85%;
+	max-width: 850px;
+	margin: 0 auto;
+}
+.header{
+	background: #BAD91B;
+	color: #323131;
+	padding: 0.4rem 0;
+	max-height: 100px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+}
+.header a{
+	color: #323131;
+	text-decoration: none;
+}
+
+.logo_nav_contenedor{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.menu-icon{
+	display: none;
+}
+
+.navegador ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.navegador ul li{
+	display: inline-block;
+}
+
+.navegador ul li a{
+	display: block;
+	padding: 0.6rem 1rem;
+	transition: all 0.4s linear;
+	border-radius: 5px;
+}
+
+.navegador ul li a:hover{
+	background: #85929E;
+}
+
+.logo{
+	letter-spacing: 15px;
+	font-size: 1.3em;
+}
+
+.main{
+	padding-top: 9rem;
+}
+
+.footer{
+	background-color: #f2f2f2;
+	padding: 2rem 0;
+	text-align: center;
+	margin-top: 6rem;
+}
+
+/*select de la pagina de comercios.php*/
+.content-input input,
+.content-select select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+.content-select select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+/* Eliminamos la fecha que por defecto aparece en el desplegable */
+.content-select select::-ms-expand {
+	display: none;
+}
+.content-select{
+	max-width: 250px;
+	position: relative;
+}
+
+.content-select select{
+	display: inline-block;
+	width: 100%;
+	cursor: pointer;
+	padding: 7px 10px;
+	height: 42px;			
+	outline: 0; 
+	border: 0;	
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #7b7b7b;
+	font-size: 1em;
+	color: #999;
+	font-family: 
+	'Quicksand', sans-serif;
+	border:2px solid rgba(0,0,0,0.2);
+	border-radius: 12px;
+	position: relative;
+				
+
+	transition: all 0.25s ease;
+}
+.content-select select:hover{
+	background: #B1E8CD;
+}
+/*hasta aca el css del select*/
+
+@media only screen and (max-width: 767px){
+	.header{
+		background: #BAD91B;
+		color: #323131;
+		max-height: 120px;
+		width: 100%;
+		position: relative;
+
+	}
+	.menu-icon{
+		display: block;
+		cursor: pointer;
+		padding: 0.6rem 0rem;
+		align-items: flex-end;
+		position: relative;
+	}
+	.menu-icon:hover + .navegador ul{
+		visibility: visible;
+	}
+	.navegador ul:hover{
+		visibility: visible;
+	}
+	.navegador{
+		width: 100%;
+		margin-top: 1rem;
+	}
+	
+	.navegador ul{
+		visibility: hidden;
+		text-align: right;
+	}
+	
+	.navegador ul.show{
+		display: block;
+	}
+	
+    .navegador ul li{
+		display: block;
+    }
+
+	.navegador ul li a{
+		display: block;
+		padding: 0.6rem 0rem;
+		transition: all 0.4s linear;
+		border-radius: 5px;
+		color: #212121;
+	}
+
+	.navegador ul li a:hover{
+		background: #D0D3D4;
+	}
+	
+}
+
+
+
+
+
+
+
+/* ----------------- adicionales comercios.php-------------------- */
+
+.buscador input[type="submit"]:hover{
+	background: #6BCFD4;
+	cursor: pointer;
+}
+
+.buscador input[type="submit"]{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #BAD91B;
+	color: #0E0E0E;
+	font-size: 18px;
+	border-radius: 20px; 
+}
+
+
+/*  */

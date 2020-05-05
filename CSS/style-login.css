@@ -1,0 +1,159 @@
+body{
+	background-attachment: fixed;
+	color: #222222;
+	font-family: georgia, times, serif;
+	font-size: 1.2rem;
+	line-height: 1.1em;
+	margin: 0;
+	background-color: #E4E5DF;
+	background-position: center;
+	width: 100%;
+	
+}
+
+h1{
+	font-size: 2rem;
+	line-height: 1.3em;
+}
+
+p{
+	margin-bottom: 1.0em;
+}
+
+.contenedor{
+	width: 85%;
+	max-width: 850px;
+	margin: 0 auto;
+}
+.header{
+	background: #BAD91B;
+	color: #323131;
+	padding: 0.4rem 0;
+	max-height: 100px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+}
+.header a{
+	color: #323131;
+	text-decoration: none;
+}
+
+.logo_nav_contenedor{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.menu-icon{
+	display: none;
+}
+
+.navegador ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.navegador ul li{
+	display: inline-block;
+}
+
+.navegador ul li a{
+	display: block;
+	padding: 0.6rem 1rem;
+	transition: all 0.4s linear;
+	border-radius: 5px;
+}
+
+.navegador ul li a:hover{
+	background: #85929E;
+}
+
+.logo{
+	letter-spacing: 15px;
+	font-size: 1.3em;
+}
+
+.main{
+	padding-top: 9rem;
+}
+
+
+
+.header{
+    z-index: 1;
+}
+.login{
+    width: 320px;
+    height: 400px;
+    background: #368ae8;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 70px 30px; 
+    box-shadow:10px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.login h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+.login label{
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.login input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login input[type="text"],
+.login input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+}
+.login input[type="submit"]:hover{
+    background: #6BCFD4;
+    cursor: pointer;
+}
+
+.login input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #BAD91B;
+    color: #0E0E0E;
+    font-size: 18px;
+    border-radius: 20px; 
+}
+
+.login a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgray;
+}
+
+.login a:hover{
+    color:white;
+}
