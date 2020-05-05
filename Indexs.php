@@ -4,7 +4,11 @@
 <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+<<<<<<< HEAD
 	<link rel="icon" href="Logo.png" type="img/text/png"/>
+=======
+	<link rel="icon" href="Logo.png" type="img/text/Logo.png"/>
+>>>>>>> Villanueva
 	
 	
 <title>Compra venta Zapala</title>
@@ -50,11 +54,37 @@
 			<p>Esta pagina fue creada en conjunto con alumnos y profesores de la Universidad Tecnologica Nacional, Regional Neuquen.</p>
 		</di>
 	</main>
-	<footer class="footer">
-		<div>
-			<p>Pagina diseñada por alumnos de la UTN</p>
-		</div>
-		
-	</footer>
+	
+
+	<div class="footer">
+        <div class="content">
+            <div class="logo">
+                <img class="logo2" src="img/logo-gris.png"> 
+            </div>
+            
+            <div class="links">
+                <h4>Links Relacionados</h4>
+                <ul>
+                    <li><a href="#">2asd</a></li>
+                    <li><a href="#">2asd</a></li>
+                    <li><a href="#">2asd</a></li>
+                    <li><a href="#">2asd</a></li>
+                </ul>
+            </div>
+            
+            <div class="contact">
+                <h4>Contactanos</h4>
+                <span>123456978</span>
+                <span>asda2@asdasda.com</span>
+                <a href="#"><img src="img/facebook-1.png" alt=""></a>
+            </div>
+
+        </div>
+        
+       
+        <div class="bottom">
+            Designed by: Ronco (All rights reserved)
+        </div>
+    </div>
 </body>
 </html>
