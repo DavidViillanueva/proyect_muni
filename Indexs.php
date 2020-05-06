@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+	<link rel="stylesheet" type="text/css" href="CSS/estilos_popup.css">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+
 	<link rel="icon" href="Logo.png" type="img/text/Logo.png"/>
 	
 	
@@ -24,7 +29,7 @@
 					<li><a href="Indexs.php">Inicio</a></li>
 					<li><a href="HTML/galeria.html">Galeria</a></li>
 					<li><a href="comercios.php">Comercios</a></li>
-					<li><a href="login.php">Login</a></li>
+					<li><a id="btn-abrir-popup" class="btn-abrir-popup" href="#">login</a></li>
 					<li><a href="registrarse.php">Registrate</a></li>
 				</ul>
 			</nav>
@@ -51,6 +56,33 @@
 		</di>
 	</main>
 	
+
+	<!-- login popup -->
+	<div class="overlay" id="overlay">
+		<div class="popup" id="popup">
+			<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+			<h3>Ingresa</h3>
+			<form action="">
+				<div class="contenedor-inputs">
+					<label for="usuario">Nombre de Usuario:</label>
+					<input type="text" name="usuario" id="usuario"  required>
+
+				
+					<label for="password">Contraseña:</label>
+					<input type="password" name="pass" id="pass"  required>
+
+					<input type="submit" value="Ingresar">
+
+					<a href="">¿Ha olvidado su contraseña?</a><br>
+					<a href="registrarse.php">Registrarse</a>
+				</div>
+				<input type="submit" class="btn-submit" value="Ingresar">
+			</form>
+		</div>
+	</div>
+
+	<script src="javascript/popup.js"></script>
+
 
 	<div class="footer">
         <div class="content">

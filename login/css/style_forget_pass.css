@@ -1,0 +1,127 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: url(../img/background.png) no-repeat center top;
+    background-size:  cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+.email_block{
+    width: 400px;
+    height: 270px;
+    background: #368ae8;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 30px 30px; /*espacio desde el contenido interno al borde*/
+    box-shadow:10px 5px 5px rgba(0, 0, 0, 0.2); /* offset-x | offset-y | blur-radius | color */
+}
+
+.email_block h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.email_block label{
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.email_block input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.email_block input[type="email"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+}
+
+.email_block input[type="submit"],
+.email_block input[type="button"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #493aaa;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px; 
+}
+.email_block input[type="submit"]:hover,
+.email_block input[type="button"]:hover{
+    background: #5c48dd;
+    cursor: pointer;
+}
+
+
+/*-------------------------------------------- restablecer contraseña -----------------------------------*/
+
+.restore_block{
+    width: 400px;
+    height: 230px;
+    background: #368ae8;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 30px 30px; /*espacio desde el contenido interno al borde*/
+    box-shadow:10px 5px 5px rgba(0, 0, 0, 0.2); /* offset-x | offset-y | blur-radius | color */
+}
+
+.restore_block h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.restore_block label{
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.restore_block input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.restore_block input[type="text"],
+.restore_block input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+}
+
+.restore_block input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #493aaa;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px; 
+}
+.restore_block input[type="submit"]:hover{
+    background: #5c48dd;
+    cursor: pointer;
+}
