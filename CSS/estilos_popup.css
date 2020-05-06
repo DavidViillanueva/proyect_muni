@@ -71,13 +71,14 @@ body {
 }
 
 .popup {
-	background: #F8F8F8;
+	background: #eaeaea;
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
 	border-radius: 3px;
 	font-family: 'Montserrat', sans-serif;
-	padding: 40px;
+	color: black;
+	padding: 30px;
 	text-align: center;
-	width: 600px;
+	width: 350px;
 	
 	transition: .3s ease all;
 	transform: scale(0.7);
@@ -98,40 +99,40 @@ body {
 }
 
 .popup h3 {
-	font-size: 36px;
+	font-size: 22px;
 	font-weight: 600;
 	margin-bottom: 20px;
 	opacity: 0;
 }
 
-.popup h4 {
-	font-size: 26px;
-	font-weight: 300;
-	margin-bottom: 40px;
-	opacity: 0;
+
+.popup form .contenedor-inputs input{
+	width: 100%;
+    margin-bottom: 20px;
 }
+
+.popup form .contenedor-inputs input[type="text"],
+.popup form .contenedor-inputs input[type="password"]{
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 30px;
+	color: black;
+	font-size: 18px;
+}
+
 
 .popup form .contenedor-inputs {
 	opacity: 0;
 }
-
-.popup form .contenedor-inputs input {
-	width: 100%;
-	margin-bottom: 20px;
-	height: 52px;
-	font-size: 18px;
-	line-height: 52px;
-	text-align: center;
-	border: 1px solid #BBBBBB;
-}
-
 .popup form .btn-submit {
 	padding: 0 20px;
 	height: 40px;
 	line-height: 40px;
 	border: none;
-	color: #fff;
-	background: #5E7DE3;
+	color: #000;
+	background: #c2d500;
 	border-radius: 3px;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 16px;
@@ -140,9 +141,18 @@ body {
 }
 
 .popup form .btn-submit:hover {
-	background: rgba(94,125,227, .9);
+	background: #c3d500be;
+}
+.popup form a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgray;
 }
 
+.popup form a:hover{
+    color:white;
+}
 /* ------------------------- */
 /* ANIMACIONES */
 /* ------------------------- */
@@ -150,6 +160,7 @@ body {
 .popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
 .popup.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
 .popup.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
+.popup.active .contenedor-inputs label{ animation: entradaInputs 1s linear 1s forwards; }
 
 @keyframes entradaTitulo {
 	from {

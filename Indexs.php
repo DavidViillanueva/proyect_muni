@@ -11,7 +11,6 @@
 
 	<link rel="icon" href="Logo.png" type="img/text/Logo.png"/>
 	
-	
 <title>Compra venta Zapala</title>
 	
 	
@@ -62,7 +61,7 @@
 		<div class="popup" id="popup">
 			<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
 			<h3>Ingresa</h3>
-			<form action="">
+			<form action="PHP/control_login/control_ingreso.php">
 				<div class="contenedor-inputs">
 					<label for="usuario">Nombre de Usuario:</label>
 					<input type="text" name="usuario" id="usuario"  required>
@@ -71,12 +70,12 @@
 					<label for="password">Contraseña:</label>
 					<input type="password" name="pass" id="pass"  required>
 
-					<input type="submit" value="Ingresar">
+					
+					<input type="submit" class="btn-submit" value="Ingresar">
 
 					<a href="">¿Ha olvidado su contraseña?</a><br>
-					<a href="registrarse.php">Registrarse</a>
+					<a href="login/registro_cliente.php" >Registrarse</a>
 				</div>
-				<input type="submit" class="btn-submit" value="Ingresar">
 			</form>
 		</div>
 	</div>
