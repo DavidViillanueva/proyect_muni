@@ -8,7 +8,7 @@ body{
 
 .register_block{
     background: #eaeaea;
-    color: black;
+    color: #3d3d3d;
     top: 50%;
     left: 50%;
     position: absolute;
@@ -18,13 +18,25 @@ body{
     padding: 30px 30px; /*espacio desde el contenido interno al borde*/
     box-shadow:10px 5px 5px rgba(0, 0, 0, 0.2); /* offset-x | offset-y | blur-radius | color */
 
+    
+
+    
+    min-width: 500px;
+}
+
+
+.register_block .header{
+    position: relative;
+
+    text-align: center;
 }
 
 .register_block .content{
     display: flex;
-}
+    flex-wrap: wrap;
 
-.register_block .content .columna1{
+}
+.register_block  .content .columna1{
     position: relative;
     flex:1;
     padding: 25px;
@@ -37,7 +49,6 @@ body{
 }
 
 .register_block .bottom{
-    align-content: center;
     position: relative;
 
     text-align: center;
@@ -72,7 +83,9 @@ body{
     background: transparent;
     outline: none;
     height: 25px;
-    color: black;
+    color: #3d3d3d;
+    font-size: 25px;
+    margin-left: 10px;
 }
 
 .register_block input[type="submit"],
@@ -81,7 +94,7 @@ body{
     border: none;
     outline: none;
     height: 40px;
-    background: #493aaa;
+    background: #c2d500;
     color: #fff;
     font-size: 18px;
     border-radius: 5px;
@@ -90,7 +103,24 @@ body{
 
 .register_block input[type="submit"]:hover,
 .register_block input[type="button"]:hover{
-    background: #5c48dd;
+    background: #b6ce00;
     cursor: pointer;
 }
 
+@media (max-width:450px){
+    .register_block{
+        top: 0%;
+        left: 0%;
+        transform: translate(0,0);
+        border-radius: 0px;
+        min-width:0;
+    }
+
+    .register_block .content{
+        flex-direction: column;
+    }
+
+    .body{
+        background: white;
+    }
+}

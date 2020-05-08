@@ -9,6 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ha olvidado su contraseña</title>
     <link rel="stylesheet" href="css/style_forget_pass.css"> 
+
+    
+	<link rel="icon" href="../img/Logo.png" type="text/png"/>
 </head>
 <body>
     <div class="email_block">
@@ -20,8 +23,10 @@
             <!-- mail -->
             <label for="text">Ingrese mail:</label>
             <input type="email" name="mail" id="mail" required>
-            <input type="submit" value="Enviar">
-            <a href="login.php"><input type="button" value="Vover inicio"></a>
+            <div class="bottom">
+                <input type="submit" value="Enviar">
+                <a href="login.php"><input type="button" value="Vover inicio"></a>
+            </div>
         </form>
     </div>
 </body>

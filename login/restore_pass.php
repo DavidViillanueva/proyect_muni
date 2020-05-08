@@ -9,6 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reestablecer contraseña</title>
     <link rel="stylesheet" href="css/style_forget_pass.css" >
+
+    
+	<link rel="icon" href="../img/Logo.png" type="text/png"/>
 </head>
 <body>
     <div class="restore_block">
@@ -21,8 +24,10 @@
             <!-- Contraseña nueva -->
             <label>Introduzca su nueva contraseña:</label>
             <input type="password" id="password" name="password" required>
-
-            <input type="submit" value="Aceptar">
+            
+            <div class="bottom">
+                <input type="submit" value="Aceptar">
+            </div>
         </form>
     </div>
 </body>

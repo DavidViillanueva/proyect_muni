@@ -1,16 +1,14 @@
 body{
     margin: 0px;
     padding: 0px;
-    background: url(../img/background.png) no-repeat center top;
+    background: url("../../img/fondo-1080p.jpg") no-repeat center top;
     background-size:  cover;
     font-family: sans-serif;
     height: 100vh;
 }
 .email_block{
-    width: 400px;
-    height: 270px;
-    background: #368ae8;
-    color: #fff;
+    background: #eaeaea;
+    color: black;
     top: 50%;
     left: 50%;
     position: absolute;
@@ -42,37 +40,44 @@ body{
 
 .email_block input[type="email"]{
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid gray;
     background: transparent;
     outline: none;
     height: 40px;
-    color: #fff;
+    color: black;
+    font-size: 20px;
 }
 
 .email_block input[type="submit"],
 .email_block input[type="button"]{
+    width: 50%;
     border: none;
     outline: none;
     height: 40px;
-    background: #493aaa;
+    background: #c2d500;
     color: #fff;
     font-size: 18px;
-    border-radius: 20px; 
+    border-radius: 5px; 
+    position: relative;
 }
 .email_block input[type="submit"]:hover,
 .email_block input[type="button"]:hover{
-    background: #5c48dd;
+    background: #b6ce00;
     cursor: pointer;
 }
 
+
+.email_block .bottom{
+    text-align: center;
+}
 
 /*-------------------------------------------- restablecer contraseña -----------------------------------*/
 
 .restore_block{
     width: 400px;
     height: 230px;
-    background: #368ae8;
-    color: #fff;
+    background: #eaeaea;
+    color: black;
     top: 50%;
     left: 50%;
     position: absolute;
@@ -83,6 +88,9 @@ body{
     box-shadow:10px 5px 5px rgba(0, 0, 0, 0.2); /* offset-x | offset-y | blur-radius | color */
 }
 
+.restore_block .bottom{
+    text-align: center;
+}
 .restore_block h1{
     margin: 0;
     padding: 0 0 20px;
@@ -105,23 +113,27 @@ body{
 .restore_block input[type="text"],
 .restore_block input[type="password"]{
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid gray;
     background: transparent;
     outline: none;
     height: 40px;
-    color: #fff;
+    color: black;
+    font-size: 25px;
+    
 }
 
 .restore_block input[type="submit"]{
+    width: 50%;
+    position: relative;
     border: none;
     outline: none;
     height: 40px;
-    background: #493aaa;
+    background: #c2d500;
     color: #fff;
     font-size: 18px;
-    border-radius: 20px; 
+    border-radius: 5px; 
 }
 .restore_block input[type="submit"]:hover{
-    background: #5c48dd;
+    background: #b6ce00;
     cursor: pointer;
 }
