@@ -21,7 +21,7 @@
 	<header class="header">
 		
 		 <div class="contenedor logo_nav_contenedor">
-			 <a title="zappag" href="https://www.zapala.gob.ar"><img src="img/logozapala.png"></a>
+			 <a title="zappag" href="https://www.zapala.gob.ar"><div class="logo"></div></a>
 			 <span class="menu-icon">Ver Menu</span>
 			<nav class="navegador">
 				<ul>
@@ -83,7 +83,7 @@
 	<script src="javascript/popup.js"></script>
 
 
-	<div class="footer">
+	<!-- <div class="footer">
         <div class="content">
             <div class="logo">
                 <img class="logo2" src="img/logo-gris.png"> 
@@ -112,6 +112,6 @@
         <div class="bottom">
             Designed by: Ronco (All rights reserved)
         </div>
-    </div>
+    </div> -->
 </body>
 </html>
