@@ -4,19 +4,17 @@
 <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 	<link rel="icon" href="Logo.png" type="img/text/png"/>
-=======
-=======
+
 	<link rel="stylesheet" type="text/css" href="CSS/estilos_popup.css">
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
 
->>>>>>> Villanueva
+
 	<link rel="icon" href="Logo.png" type="img/text/Logo.png"/>
->>>>>>> Villanueva
+
 	
 <title>Compra venta Zapala</title>
 	
@@ -25,10 +23,9 @@
 
 <body background="fondoazul2.png">	
 	<header class="header">
-		
 		 <div class="contenedor logo_nav_contenedor">
-			 <a title="zappag" href="https://www.zapala.gob.ar"><div class="logo"></div></a>
-			 <div class="menu-icon"></div>
+			<a title="zappag" href="https://www.zapala.gob.ar"><div class="logo"></div></a>
+			<div class="menu-icon"></div>
 			<nav class="navegador">
 				<ul>
 					<li><a href="Indexs.php">Inicio</a></li>
@@ -40,7 +37,13 @@
 			</nav>
 		</div>
 	</header>
+
+
+
 	<span class="linea"></span>
+
+
+
 	<main class="main">
 		<div class="contenedor">
 		   <h1>Bienvenidos a el mercado concentrador de Zapala</h1>
