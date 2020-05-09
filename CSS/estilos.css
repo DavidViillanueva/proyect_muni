@@ -3,7 +3,7 @@
 body{
 	background-attachment: fixed;
 	color: #222222;
-	font-family: georgia, times, serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1.2rem;
 	line-height: 1.1em;
 	margin: 0;
@@ -88,13 +88,6 @@ p{
 	padding-top: 9rem;
 }
 
-.footer{
-	background-color: #f2f2f2;
-	padding: 2rem 0;
-	text-align: center;
-	margin-top: 6rem;
-}
-
 /*select de la pagina de comercios.php*/
 .content-input input,
 .content-select select{
@@ -129,8 +122,6 @@ p{
 	color: #7b7b7b;
 	font-size: 1em;
 	color: #999;
-	font-family: 
-	'Quicksand', sans-serif;
 	border:2px solid rgba(0,0,0,0.2);
 	border-radius: 12px;
 	position: relative;
@@ -142,6 +133,67 @@ p{
 	background: #B1E8CD;
 }
 /*hasta aca el css del select*/
+
+/*------------------------ footer ----------------------------------*/
+
+.footer{
+    background:#f2f2f2;
+    color:black;
+    height: 300px;
+	position: relative;
+	text-align: center;
+}
+
+
+
+.footer .content{
+	
+    background:#f2f2f2;
+    height: 270px;
+    display: flex;
+}
+
+.footer .content .logo{
+	background:#f2f2f2;
+    margin-left: 50px;
+    margin-top: 20px;
+    flex: 1;
+}
+
+.footer .content .links{
+	background:#f2f2f2;
+    margin-left: 50px;
+    margin-top: 20px;
+    flex: 1;
+}
+.footer .content .contact{
+	background:#f2f2f2;
+    margin-left: 50px;
+    margin-top: 20px;
+    flex: 1;
+}
+
+
+
+.footer .content .contact h1 span{
+    color: black;
+}
+
+.footer .content .contact span{
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+
+
+.footer .content .links ul li{
+    display: block;
+    margin-bottom:20px;
+    font-size: 1.2em;
+    text-decoration: none;
+
+}
 
 @media only screen and (max-width: 767px){
 	.header{
@@ -195,15 +247,40 @@ p{
 		background: #D0D3D4;
 	}
 	
-
+	/* ---------------logo--------------- */
 	.contenedor .logo{
 		margin-top: 30px;
 		background: url(../img/Logo.png) top left no-repeat;
 		width: 70px;
 		height: 70px;
 	}
-}
 
+
+	/* -----------------------footer--------------------- */
+	.footer{
+		text-align: left;
+	}
+	.footer .content{
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.footer .content .logo{
+		margin-left: 0px;
+		text-align: center;
+	}
+
+	.footer .content .links{
+		margin-left: 0px;
+		text-align: center;
+	}
+
+	.footer .content .contact{
+		margin-left: 0px;
+		margin-top: 0px;
+		text-align: center;
+	}
+}
 
 
 
@@ -229,71 +306,4 @@ p{
 
 
 /*  */
-/*------------------------ footer ----------------------------------*/
 
-.footer{
-    background:#f2f2f2;
-    color:black;
-    height: 300px;
-    position: relative;
-    
-}
-
-.footer .bottom{
-    background: rgb(155, 155, 155);
-    color: black;
-    height: 20px;
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    padding-top: 10px;
-}
-
-.footer .content{
-    height: 270px;
-    display: flex;
-}
-
-.footer .content .logo{
-    position: relative;
-    margin-left: 50px;
-    margin-top: 50px;
-    flex: 1;
-}
-
-.footer .content .links{
-    position: relative;
-    margin-left: 50px;
-    margin-top: 20px;
-    flex: 1;
-}
-.footer .content .contact{
-    position: relative;
-    margin-left: 50px;
-    margin-top: 20px;
-    flex: 1;
-}
-
-
-
-.footer .content .contact h1 span{
-    color: black;
-}
-
-.footer .content .contact span{
-    display: block;
-    font-size: 1.1em;
-    margin-bottom: 8px;
-}
-
-
-
-.footer .content .links ul li{
-    display: block;
-    margin-bottom:20px;
-    font-size: 1.2em;
-    text-decoration: none;
-
-}
