@@ -5,11 +5,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<link rel="icon" href="Logo.png" type="img/text/png"/>
 =======
+=======
+	<link rel="stylesheet" type="text/css" href="CSS/estilos_popup.css">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+
+>>>>>>> Villanueva
 	<link rel="icon" href="Logo.png" type="img/text/Logo.png"/>
 >>>>>>> Villanueva
-	
 	
 <title>Compra venta Zapala</title>
 	
@@ -17,18 +24,17 @@
 </head>
 
 <body background="fondoazul2.png">	
-	
 	<header class="header">
 		
 		 <div class="contenedor logo_nav_contenedor">
-			 <a title="zappag" href="https://www.zapala.gob.ar"><img src="img/logozapala.png"></a>
-			 <span class="menu-icon">Ver Menu</span>
+			 <a title="zappag" href="https://www.zapala.gob.ar"><div class="logo"></div></a>
+			 <div class="menu-icon"></div>
 			<nav class="navegador">
 				<ul>
 					<li><a href="Indexs.php">Inicio</a></li>
 					<li><a href="HTML/galeria.html">Galeria</a></li>
 					<li><a href="comercios.php">Comercios</a></li>
-					<li><a href="login.php">Login</a></li>
+					<li><a id="btn-abrir-popup" class="btn-abrir-popup" href="#">login</a></li>
 					<li><a href="registrarse.php">Registrate</a></li>
 				</ul>
 			</nav>
@@ -56,6 +62,33 @@
 	</main>
 	
 
+	<!-- login popup -->
+	<div class="overlay" id="overlay">
+		<div class="popup" id="popup">
+			<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+			<h3>Ingresa</h3>
+			<form action="PHP/control_login/control_ingreso.php">
+				<div class="contenedor-inputs">
+					<label for="usuario">Nombre de Usuario:</label>
+					<input type="text" name="usuario" id="usuario"  required>
+
+				
+					<label for="password">Contraseña:</label>
+					<input type="password" name="pass" id="pass"  required>
+
+					
+					<input type="submit" class="btn-submit" value="Ingresar">
+
+					<a href="">¿Ha olvidado su contraseña?</a><br>
+					<a href="login/registro_cliente.php" >Registrarse</a>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script src="javascript/popup.js"></script>
+
+
 	<div class="footer">
         <div class="content">
             <div class="logo">
@@ -80,11 +113,7 @@
             </div>
 
         </div>
-        
-       
-        <div class="bottom">
-            Designed by: Ronco (All rights reserved)
-        </div>
-    </div>
+	</div>
+	
 </body>
 </html>

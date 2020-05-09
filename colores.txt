@@ -1,0 +1,5 @@
+verde = c2d500
+verde hover = b6ce00
+azul = 1664c1
+gris = eaeaea
+negro = 3d3d3d
