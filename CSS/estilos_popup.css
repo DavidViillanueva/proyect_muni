@@ -1,0 +1,170 @@
+
+.contenedor-inputs {
+	width: 90%;
+	max-width: 1000px;
+	margin: 30px auto;
+}
+
+
+/* ------------------------- */
+/* POPUP */
+/* ------------------------- */
+
+.overlay {
+	background: rgba(0,0,0,.3);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+}
+
+.overlay.active {
+	visibility: visible;
+}
+
+.popup {
+	background: #eaeaea;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	border-radius: 3px;
+	font-family: 'Montserrat', sans-serif;
+	color: black;
+	padding: 30px;
+	text-align: center;
+	width: 350px;
+	
+	transition: .3s ease all;
+	transform: scale(0.7);
+	opacity: 0;
+}
+
+.popup .btn-cerrar-popup {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	transition: .3s ease all;
+	color: #BBBBBB;
+}
+
+.popup .btn-cerrar-popup:hover {
+	color: #000;
+}
+
+.popup h3 {
+	font-size: 22px;
+	font-weight: 600;
+	margin-bottom: 20px;
+	opacity: 0;
+}
+
+
+.popup form .contenedor-inputs input{
+	width: 100%;
+    margin-bottom: 20px;
+}
+
+.popup form .contenedor-inputs input[type="text"],
+.popup form .contenedor-inputs input[type="password"]{
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 30px;
+	color: black;
+	font-size: 18px;
+}
+
+
+.popup form .contenedor-inputs {
+	opacity: 0;
+}
+.popup form .btn-submit {
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	color: #000;
+	background: #c2d500;
+	border-radius: 3px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+	transition: .3s ease all;
+}
+
+.popup form .btn-submit:hover {
+	background: #c3d500be;
+}
+.popup form a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgray;
+}
+
+.popup form a:hover{
+    color:white;
+}
+/* ------------------------- */
+/* ANIMACIONES */
+/* ------------------------- */
+.popup.active {	transform: scale(1); opacity: 1; }
+.popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
+.popup.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
+.popup.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
+.popup.active .contenedor-inputs label{ animation: entradaInputs 1s linear 1s forwards; }
+
+@keyframes entradaTitulo {
+	from {
+		opacity: 0;
+		transform: translateY(-25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaSubtitulo {
+	from {
+		opacity: 0;
+		transform: translateY(25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaInputs {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@media only screen and (max-width: 767px){
+	.popup{
+		position: absolute;
+		margin: 0px;
+		top: 0px;
+		left: 0px;
+		height: 100%;
+		width: 100%;
+		padding: 0px;
+		text-align: center;
+	}
+
+	.popup .btn-cerrar-popup {
+		font-size: 25px;
+		line-height: 25px;
+		text-align: center;
+		
+		padding-top: 20px;
+	}
+}

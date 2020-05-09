@@ -1,0 +1,126 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: url("../../img/fondo-1080p.jpg") center top;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.register_block{
+    background: #eaeaea;
+    color: #3d3d3d;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 30px 30px; /*espacio desde el contenido interno al borde*/
+    box-shadow:10px 5px 5px rgba(0, 0, 0, 0.2); /* offset-x | offset-y | blur-radius | color */
+
+    
+
+    
+    min-width: 500px;
+}
+
+
+.register_block .header{
+    position: relative;
+
+    text-align: center;
+}
+
+.register_block .content{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.register_block  .content .columna1{
+    position: relative;
+    flex:1;
+    padding: 25px;
+}
+
+.register_block .content .columna2{
+    position: relative;
+    flex:1;
+    padding: 25px;
+}
+
+.register_block .bottom{
+    position: relative;
+
+    text-align: center;
+}
+
+.register_block h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.register_block label{
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.register_block input{
+    
+    margin-bottom: 20px;
+}
+
+.register_block input[type="text"],
+.register_block input[type="password"],
+.register_block input[type="email"]
+{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid gray;
+    background: transparent;
+    outline: none;
+    height: 25px;
+    color: #3d3d3d;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.register_block input[type="submit"],
+.register_block input[type="button"]{
+    width: 50%;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #c2d500;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.register_block input[type="submit"]:hover,
+.register_block input[type="button"]:hover{
+    background: #b6ce00;
+    cursor: pointer;
+}
+
+@media (max-width:450px){
+    .register_block{
+        top: 0%;
+        left: 0%;
+        transform: translate(0,0);
+        border-radius: 0px;
+        min-width:0;
+    }
+
+    .register_block .content{
+        flex-direction: column;
+    }
+
+    .body{
+        background: white;
+    }
+}
