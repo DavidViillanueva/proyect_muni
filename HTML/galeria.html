@@ -1,103 +1,161 @@
 <!doctype html>
-<html>
+<html lang="es">
 <head>
 <meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
-<link rel="icon" href="../img2/Logo.png" type="text/png"/>
-<link rel="stylesheet" type="text/css" href="../CSS/cssgaleria.css">
-<link rel="stylesheet" type="text/css" href="../CSS/estilos.css">
-<link rel="stylesheet" type="text/png" href="../img2/fondoazul2.png">
-<link rel="stylesheet" type="text/png" href="../img2/intento.png">
-<link rel="stylesheet" type="text/png"  href="../img2/Logo.png">
-<link rel="stylesheet" type="text/png"  href="../img2/logozapala.png">
-<link rel="stylesheet" type="text/png"  href="../img2/utn.png">
-<script src="https://kit.fontawesome.com/03bb9eb116.js" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../CSS/estilos.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/estilos_popup.css">
 
-<title>Galeria</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img2/Logo.png" type="text/png"/>
+    <link rel="stylesheet" type="text/css" href="../CSS/cssgaleria.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/estilos.css">
+    <link rel="stylesheet" type="text/png" href="../img2/fondoazul2.png">
+    <link rel="stylesheet" type="text/png" href="../img2/intento.png">
+    <link rel="stylesheet" type="text/png"  href="../img2/Logo.png">
+    <link rel="stylesheet" type="text/png"  href="../img2/logozapala.png">
+    <link rel="stylesheet" type="text/png"  href="../img2/utn.png">
+
+	<link rel="icon" href="Logo.png" type="../img/Logo.png"/>
+	
+<title>Compra venta Zapala</title>
+	
+	
 </head>
 
-<body>
+<body background="fondoazul2.png">	
 	<header class="header">
 		
 		 <div class="contenedor logo_nav_contenedor">
-			<img src="../img2/logozapala.png">
-			 <span class="menu-icon">Ver Menu</span>
+			 <a title="zappag" href="https://www.zapala.gob.ar"><div class="logo"></div></a>
+			 <div class="menu-icon"></div>
 			<nav class="navegador">
 				<ul>
-					<li><a href="../Index.php">Inicio</a></li>
-					<li><a href="../HTML/galeria.html">Galeria</a></li>
-					<li><a href="../comercios.php">Comercios</a></li>
-					<li><a href="../login.php">Login</a></li>
-					<li><a href="../registrarse.php">Registrate</a></li>
+					<li><a href="Indexs.php">Inicio</a></li>
+					<li><a href="HTML/galeria.html">Galeria</a></li>
+					<li><a href="comercios.php">Comercios</a></li>
+					<li><a id="btn-abrir-popup" class="btn-abrir-popup" href="#">login</a></li>
+					<li><a href="registrarse.php">Registrate</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
+	<span class="linea"></span>
 	<main class="main">
-	<h1>Galeria de Imagenes</h1>
+		<h1>Galeria de Imagenes</h1>
 		<span class="linea"></span>
 		<section class="galeria">
 			<a href="#image1">
-				<img src="../img/01.jpg" alt=""></a>
+				<img src="../img/galeria/01.jpg" alt=""></a>
 			<a href="#image2">
-				<img src="../img/02.jpg" alt=""></a>
+				<img src="../img/galeria/02.jpg" alt=""></a>
 			<a href="#image3">
-				<img src="../img/03.jpg" alt=""></a>
+				<img src="../img/galeria/03.jpg" alt=""></a>
 			<a href="#image4">
-				<img src="../img/04.jpg" alt=""></a>
+				<img src="../img/galeria/04.jpg" alt=""></a>
 			<a href="#image6">
-				<img src="../img/05.jpg" alt=""></a>
+				<img src="../img/galeria/05.jpg" alt=""></a>
 			<a href="#image6">
-				<img src="../img/06.jpg" alt=""></a>	
+				<img src="../img/galeria/06.jpg" alt=""></a>	
 		</section>
-	<article class="light-box" id="image1">
-		<a href="#image6" class="next"><i class="fas fa-arrow-alt-circle-left"></i></a>
-		<img src="../img/01.jpg" alt="">
-		<a href="#image2" class="next"><i class="fas fa-arrow-alt-circle-right"></i></a>
-		<a href="" class="close">X</a>
-	</article>
+        <article class="light-box" id="image1">
+            <a href="#image6" class="next"><i class="fas fa-arrow-alt-circle-left"></i></a>
+            <img src="../galeria/img/01.jpg" alt="">
+            <a href="#image2" class="next"><i class="fas fa-arrow-alt-circle-right"></i></a>
+            <a href="" class="close">X</a>
+        </article>
+        
+        <article class="light-box" id="image2">
+            <a href="#image1" class="next"><i class="fas fa-arrow-alt-circle-left"></i></a>
+            <img src="../galeria/img/02.jpg" alt="">
+            <a href="#image3" class="next"><i class="fas fa-arrow-alt-circle-right"></i></a>
+            <a href="" class="close">X</a>
+        </article>
+        
+        <article class="light-box" id="image3">
+            <a href="#image2" class="next"><i class="fas fa-arrow-alt-circle-left"></i></a>
+            <img src="../galeria/img/03.jpg" alt="">
+            <a href="#image4" class="next"><i class="fas fa-arrow-alt-circle-right"></i></a>
+            <a href="" class="close">X</a>
+        </article>
+        
+        <article class="light-box" id="image4">
+            <a href="#image3" class="next"><i class="fas fa-arrow-alt-circle-left"></i></a>
+            <img src="../galeria/img/04.jpg" alt="">
+            <a href="#image5" class="next"><i class="fas fa-arrow-alt-circle-right"></i></a>
+            <a href="" class="close">X</a>
+        </article>
+        
+        <article class="light-box" id="image5">
+            <a href="#image4" class="next"><i class="fas fa-arrow-alt-circle-left"></i></a>
+            <img src="../galeria/img/05.jpg" alt="">
+            <a href="#image6" class="next"><i class="fas fa-arrow-alt-circle-right"></i></a>
+            <a href="" class="close">X</a>
+        </article>
+        
+        <article class="light-box" id="image6">
+            <a href="#image5" class="next"><i class="fas fa-arrow-alt-circle-left"></i></a>
+            <img src="../galeria/img/06.jpg" alt="">
+            <a href="#image1" class="next"><i class="fas fa-arrow-alt-circle-right"></i></a>
+            <a href="" class="close">X</a>
+        </article>
+	</main>
 	
-	<article class="light-box" id="image2">
-		<a href="#image1" class="next"><i class="fas fa-arrow-alt-circle-left"></i></a>
-		<img src="../img/02.jpg" alt="">
-		<a href="#image3" class="next"><i class="fas fa-arrow-alt-circle-right"></i></a>
-		<a href="" class="close">X</a>
-	</article>
-	
-	<article class="light-box" id="image3">
-		<a href="#image2" class="next"><i class="fas fa-arrow-alt-circle-left"></i></a>
-		<img src="../img/03.jpg" alt="">
-		<a href="#image4" class="next"><i class="fas fa-arrow-alt-circle-right"></i></a>
-		<a href="" class="close">X</a>
-	</article>
-	
-	<article class="light-box" id="image4">
-		<a href="#image3" class="next"><i class="fas fa-arrow-alt-circle-left"></i></a>
-		<img src="../img/04.jpg" alt="">
-		<a href="#image5" class="next"><i class="fas fa-arrow-alt-circle-right"></i></a>
-		<a href="" class="close">X</a>
-	</article>
-	
-	<article class="light-box" id="image5">
-		<a href="#image4" class="next"><i class="fas fa-arrow-alt-circle-left"></i></a>
-		<img src="../img/05.jpg" alt="">
-		<a href="#image6" class="next"><i class="fas fa-arrow-alt-circle-right"></i></a>
-		<a href="" class="close">X</a>
-	</article>
-	
-	<article class="light-box" id="image6">
-		<a href="#image5" class="next"><i class="fas fa-arrow-alt-circle-left"></i></a>
-		<img src="../img/06.jpg" alt="">
-		<a href="#image1" class="next"><i class="fas fa-arrow-alt-circle-right"></i></a>
-		<a href="" class="close">X</a>
-	</article>
-	
-	</main>	
-	<footer class="footer">
-		<div>
-			<p>Pagina diseñada por alumnos de la UTN</p>
+
+	<!-- login popup -->
+	<div class="overlay" id="overlay">
+		<div class="popup" id="popup">
+			<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+			<h3>Ingresa</h3>
+			<form action="PHP/control_login/control_ingreso.php">
+				<div class="contenedor-inputs">
+					<label for="usuario">Nombre de Usuario:</label>
+					<input type="text" name="usuario" id="usuario"  required>
+
+				
+					<label for="password">Contraseña:</label>
+					<input type="password" name="pass" id="pass"  required>
+
+					
+					<input type="submit" class="btn-submit" value="Ingresar">
+
+					<a href="">¿Ha olvidado su contraseña?</a><br>
+					<a href="../login/registro_cliente.php" >Registrarse</a>
+				</div>
+			</form>
 		</div>
-		
-	</footer>
+	</div>
+
+	<script src="../javascript/popup.js"></script>
+
+
+	<div class="footer">
+        <div class="content">
+            <div class="logo">
+                <img class="logo2" src="../img/logo-gris.png"> 
+            </div>
+            
+            <div class="links">
+                <h4>Links Relacionados</h4>
+                <ul>
+                    <li><a href="#">2asd</a></li>
+                    <li><a href="#">2asd</a></li>
+                    <li><a href="#">2asd</a></li>
+                    <li><a href="#">2asd</a></li>
+                </ul>
+            </div>
+            
+            <div class="contact">
+                <h4>Contactanos</h4>
+                <span>123456978</span>
+                <span>asda2@asdasda.com</span>
+                <a href="#"><img src="img/facebook-1.png" alt=""></a>
+            </div>
+
+        </div>
+	</div>
+	
 </body>
 </html>

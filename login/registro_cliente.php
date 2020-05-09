@@ -55,7 +55,7 @@
                 </div>
             <div class="bottom">
                     <input type="submit" value="Registrarse">
-                    <a href="Indexs.php"><input type="button" value="Volver Inicio"></a>
+                    <a href="../Indexs.php"><input type="button" value="Volver Inicio"></a>
             </div>
         </form>
 	   </div>
