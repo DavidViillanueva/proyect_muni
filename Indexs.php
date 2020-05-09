@@ -21,7 +21,7 @@
 		
 		 <div class="contenedor logo_nav_contenedor">
 			 <a title="zappag" href="https://www.zapala.gob.ar"><div class="logo"></div></a>
-			 <span class="menu-icon">Ver Menu</span>
+			 <div class="menu-icon"></div>
 			<nav class="navegador">
 				<ul>
 					<li><a href="Indexs.php">Inicio</a></li>
