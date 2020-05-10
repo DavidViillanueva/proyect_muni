@@ -1,0 +1,134 @@
+.contenedor{
+	width: 85%;
+	max-width: 850px;
+    margin: 0 auto;
+}
+header{
+	background: #BAD91B;
+	color: #323131;
+	max-height: 100px;
+	position: fixed;
+	left: 0;
+	top: 0;
+    right: 0;
+
+}
+header a{
+	color: #323131;
+	text-decoration: none;
+}
+
+
+.contenedor{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.contenedor .logo{
+	background: url(../img/logozapala.png) top left no-repeat;
+	width: 260px;
+    height: 120px;
+    margin-top: -10px;
+}
+
+.navegador ul{
+	margin: 0;
+	padding: 0;
+    list-style: none;
+    
+}
+
+.navegador ul li{
+	display: inline-block;
+}
+
+.navegador ul li a{
+	display: block;
+	padding: 0.6rem 1rem;
+    border-radius: 5px;
+    
+}
+
+.navegador ul li a:hover{
+	background: #85929E;
+}
+
+
+.menu-toggle{
+    visibility: hidden;
+    padding: 1em;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+}
+.menu-open .hamburger{
+    transform: rotate(45deg);
+}
+.menu-open .hamburger::before{
+    opacity: 0;
+}
+.menu-open .hamburger::after{
+    transform: translateY(-3px) rotate(-90deg);
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+    content: '';
+    display: block;
+    background: #707070;
+    height: 3px;
+    width: 45px;
+    border-radius: 3px;
+    transition: all ease-in-out 500ms;
+}
+.hamburger::before{
+    transform: translateY(-6px);
+    height: 3px;
+}
+.hamburger::after{
+    transform: translateY(3px);
+}
+
+@media only screen and (max-width: 767px){
+    .contenedor{
+        width: 100%;
+    }
+    .contenedor .logo{
+        min-width: 370px;
+        margin-top: 20px;
+        margin-left: 20px;
+		background: url(../img/Logo.png) top left no-repeat;
+		width: 70px;
+        height: 70px;
+    }
+    .navegador{
+        margin-top: 10px;
+        left: 375px;
+        flex: 1;
+        text-align: center;
+        visibility: hidden;
+        background: rgb(157, 199, 4);
+        transition: all ease-in-out 500ms;
+        position: relative;
+        z-index: 1;
+    }
+    .navegador-open{
+        visibility: visible;
+        transform: translateX(-375px);
+    }
+    .navegador ul li{
+        display: block;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navegador ul li:last-child{
+        border-bottom: 1px solid#BAD91B;
+    }
+
+    .menu-toggle{
+        visibility: visible;
+    }
+}

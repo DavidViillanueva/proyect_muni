@@ -23,72 +23,7 @@ p{
 	margin-bottom: 1.0em;
 }
 
-.contenedor{
-	width: 85%;
-	max-width: 850px;
-	margin: 0 auto;
-}
-.header{
-	background: #BAD91B;
-	color: #323131;
-	padding: 0.4rem 0;
-	max-height: 100px;
-	position: fixed;
-	left: 0;
-	top: 0;
-	right: 0;
-}
-.header a{
-	color: #323131;
-	text-decoration: none;
-}
 
-.logo_nav_contenedor{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-}
-.contenedor .logo{
-	background: url(../img/logozapala.png) top left no-repeat;
-	width: 260px;
-	height: 120px;
-}
-.menu-icon{
-	display: none;
-	background: url(../img/menu-icon.png)center  no-repeat;
-	width: 70px;
-	height: 50px;
-	margin-top: 30px;
-}
-
-
-
-.navegador ul{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.navegador ul li{
-	display: inline-block;
-}
-
-.navegador ul li a{
-	display: block;
-	padding: 0.6rem 1rem;
-	transition: all 0.4s linear;
-	border-radius: 5px;
-}
-
-.navegador ul li a:hover{
-	background: #85929E;
-}
-
-.logo{
-	letter-spacing: 15px;
-	font-size: 1.3em;
-}
 
 .main{
 	padding-top: 9rem;
@@ -202,65 +137,7 @@ p{
 }
 
 @media only screen and (max-width: 767px){
-	.header{
-		background: #BAD91B;
-		color: #323131;
-		max-height: 120px;
-		width: 100%;
-		position: relative;
-
-	}
-	.menu-icon{
-		display: block;
-		cursor: pointer;
-		padding: 0.6rem 0rem;
-		align-items: flex-end;
-		position: relative;
-	}
-	.menu-icon:hover + .navegador ul{
-		visibility: visible;
-	}
-	.navegador ul:hover{
-		visibility: visible;
-	}
-	.navegador{
-		width: 100%;
-		margin-top: 1rem;
-	}
 	
-	.navegador ul{
-		visibility: hidden;
-		text-align: right;
-	}
-	
-	.navegador ul.show{
-		display: block;
-	}
-	
-    .navegador ul li{
-		display: block;
-    }
-
-	.navegador ul li a{
-		display: block;
-		padding: 0.6rem 0rem;
-		transition: all 0.4s linear;
-		border-radius: 5px;
-		color: #212121;
-	}
-
-	.navegador ul li a:hover{
-		background: #D0D3D4;
-	}
-	
-	/* ---------------logo--------------- */
-	.contenedor .logo{
-		margin-top: 30px;
-		background: url(../img/Logo.png) top left no-repeat;
-		width: 70px;
-		height: 70px;
-	}
-
 
 	/* -----------------------footer--------------------- */
 	.footer{

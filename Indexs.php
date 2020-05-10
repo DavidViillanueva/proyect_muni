@@ -8,6 +8,7 @@
 	<link rel="icon" href="Logo.png" type="img/text/png"/>
 
 	<link rel="stylesheet" type="text/css" href="CSS/estilos_popup.css">
+	<link rel="stylesheet" type="text/css" href="CSS/style-menu.css">
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
@@ -21,12 +22,17 @@
 	
 </head>
 
-<body background="fondoazul2.png">	
-	<header class="header">
-		 <div class="contenedor logo_nav_contenedor">
-			<a title="zappag" href="https://www.zapala.gob.ar"><div class="logo"></div></a>
-			<div class="menu-icon"></div>
-			<nav class="navegador">
+<body>	
+	
+	<header>
+        <div class="contenedor">
+            <div class="logo"></div>
+            
+            <div id="menu-toggle" class="menu-toggle" onClick="cambiarClase()">
+                <div class="hamburger"></div>
+            </div>
+            
+            <nav class="navegador" id="navegador">
 				<ul>
 					<li><a href="Indexs.php">Inicio</a></li>
 					<li><a href="HTML/galeria.html">Galeria</a></li>
@@ -37,7 +43,7 @@
 			</nav>
 		</div>
 	</header>
-
+	<script src="javascript/menu.js"></script>
 
 
 	<span class="linea"></span>
