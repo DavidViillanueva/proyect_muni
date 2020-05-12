@@ -3,5 +3,5 @@ function cambiarClase(){
         siteNav.classList.toggle('navegador-open');
     let menuOpen = document.getElementById('menu-toggle');
         menuOpen.classList.toggle('menu-open');    
-        
+    
 }

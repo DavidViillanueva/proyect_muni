@@ -7,11 +7,10 @@ header{
 	background: #BAD91B;
 	color: #323131;
 	max-height: 100px;
-	position: fixed;
 	left: 0;
 	top: 0;
     right: 0;
-
+    flex: 1;
 }
 header a{
 	color: #323131;
@@ -40,9 +39,8 @@ header a{
 }
 
 .navegador ul li{
-	display: inline-block;
+    display: inline-block;
 }
-
 .navegador ul li a{
 	display: block;
 	padding: 0.6rem 1rem;
@@ -59,8 +57,7 @@ header a{
     visibility: hidden;
     padding: 1em;
     position: absolute;
-    top: 40px;
-    right: 20px;
+   
 }
 .menu-open .hamburger{
     transform: rotate(45deg);
@@ -95,7 +92,7 @@ header a{
         width: 100%;
     }
     .contenedor .logo{
-        min-width: 370px;
+        min-width: 300px;
         margin-top: 20px;
         margin-left: 20px;
 		background: url(../img/Logo.png) top left no-repeat;
@@ -103,21 +100,24 @@ header a{
         height: 70px;
     }
     .navegador{
+        opacity: 0;
         margin-top: 10px;
-        left: 375px;
         flex: 1;
         text-align: center;
         visibility: hidden;
-        background: rgb(157, 199, 4);
+        background: rgba(157, 199, 4, 0.986);
         transition: all ease-in-out 500ms;
         position: relative;
         z-index: 1;
     }
     .navegador-open{
         visibility: visible;
-        transform: translateX(-375px);
+        transform: scale(1);
+        opacity: 1;
     }
     .navegador ul li{
+        text-transform: uppercase;
+        border-bottom: 1px solid #7070707e;
         display: block;
         width: 100%;
         padding-top: 10px;
@@ -125,10 +125,13 @@ header a{
     }
 
     .navegador ul li:last-child{
-        border-bottom: 1px solid#BAD91B;
+        border-bottom: 1px solid rgba(157, 199, 4, 0.986);
     }
 
     .menu-toggle{
         visibility: visible;
+        top: 30px;
+        right: 0px;
     }
+
 }

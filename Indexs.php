@@ -11,10 +11,11 @@
 	<link rel="stylesheet" type="text/css" href="CSS/style-menu.css">
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/5d5c86fd92.js" crossorigin="anonymous"></script>
 
 
-
-	<link rel="icon" href="Logo.png" type="img/text/Logo.png"/>
+	<link rel="icon" href="Logo.png" type="img/Logo.png"/>
 
 	
 <title>Compra venta Zapala</title>
@@ -34,10 +35,10 @@
             
             <nav class="navegador" id="navegador">
 				<ul>
-					<li><a href="Indexs.php">Inicio</a></li>
+					<li><a href="Indexs.php">Inicio</i> </menu-icon></a></li>
 					<li><a href="HTML/galeria.html">Galeria</a></li>
 					<li><a href="comercios.php">Comercios</a></li>
-					<li><a id="btn-abrir-popup" class="btn-abrir-popup" href="#">login</a></li>
+					<li><a id="btn-abrir-popup" class="btn-abrir-popup" href="#">login</i></a></li>
 					<li><a href="registrarse.php">Registrate</a></li>
 				</ul>
 			</nav>
