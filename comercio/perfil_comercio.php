@@ -14,11 +14,17 @@
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/5d5c86fd92.js" crossorigin="anonymous"></script>
+    
+    <script src="https://kit.fontawesome.com/5d5c86fd92.js" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="javascript/menu_tabs.js"></script>
 
+    <!-- se deja por la animacion del toggle -->
+    <script src="../javascript/menu.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../javascript/menu-nav.js"></script> 
+    
 	<link rel="icon" href="Logo.png" type="img/Logo.png"/>
 
 
@@ -36,7 +42,7 @@
                 <div class="hamburger"></div>
             </div>
             
-            <nav class="navegador" id="navegador">
+            <nav class="navegador" id="navegador" onClick="cambiarClase()">
 				<ul>
 					<li><a href="Indexs.php">Inicio</i> </menu-icon></a></li>
 					<li><a href="HTML/galeria.html">Galeria</a></li>
@@ -47,8 +53,7 @@
 			</nav>
 		</div>
 	</header>
-	<script src="../javascript/menu.js"></script>
-    
+	
     
     <main class="profile">
 		<div class="cuerpo">

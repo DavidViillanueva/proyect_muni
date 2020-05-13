@@ -3,20 +3,24 @@
 <head>
 <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- hojas de estilo -->
 	<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
-
-	<link rel="icon" href="Logo.png" type="img/text/png"/>
-
 	<link rel="stylesheet" type="text/css" href="CSS/estilos_popup.css">
 	<link rel="stylesheet" type="text/css" href="CSS/style-menu.css">
-
+	<!--fuentes externas -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/5d5c86fd92.js" crossorigin="anonymous"></script>
-
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- javascript interno -->
+	
+	
 
 	<link rel="icon" href="Logo.png" type="img/Logo.png"/>
 
+	
 	
 <title>Compra venta Zapala</title>
 	
@@ -33,7 +37,7 @@
                 <div class="hamburger"></div>
             </div>
             
-            <nav class="navegador" id="navegador">
+            <nav class="navegador" id="navegador" onClick="cambiarClase()">
 				<ul>
 					<li><a href="Indexs.php">Inicio</i> </menu-icon></a></li>
 					<li><a href="HTML/galeria.html">Galeria</a></li>
@@ -44,8 +48,9 @@
 			</nav>
 		</div>
 	</header>
+	<script src="javascript/menu-nav.js"></script>
 	<script src="javascript/menu.js"></script>
-
+	
 
 	<span class="linea"></span>
 
@@ -96,8 +101,8 @@
 		</div>
 	</div>
 
+	
 	<script src="javascript/popup.js"></script>
-
 
 	<div class="footer">
         <div class="content">

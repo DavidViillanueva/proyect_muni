@@ -2,6 +2,10 @@
 	width: 85%;
 	max-width: 850px;
     margin: 0 auto;
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
 }
 header{
 	background: #BAD91B;
@@ -17,13 +21,6 @@ header a{
 	text-decoration: none;
 }
 
-
-.contenedor{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-}
 .contenedor .logo{
 	background: url(../img/logozapala.png) top left no-repeat;
 	width: 260px;
@@ -100,14 +97,13 @@ header a{
         height: 70px;
     }
     .navegador{
-        opacity: 0;
         margin-top: 10px;
-        flex: 1;
-        text-align: center;
-        visibility: hidden;
-        background: rgba(157, 199, 4, 0.986);
-        transition: all ease-in-out 500ms;
+        background: #BAD91B;
         position: relative;
+        left: -100%;
+        width: 80%;
+        height: 100%;
+        margin: 0;
         z-index: 1;
     }
     .navegador-open{
