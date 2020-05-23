@@ -1,7 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    background: url("../../img/fondo-1080p.jpg") center top;
+    background: url("../img/fondo-1080p.jpg") center top;
     font-family: sans-serif;
     height: 100vh;
 }
@@ -17,10 +17,6 @@ body{
     border-radius: 10px;
     padding: 30px 30px; /*espacio desde el contenido interno al borde*/
     box-shadow:10px 5px 5px rgba(0, 0, 0, 0.2); /* offset-x | offset-y | blur-radius | color */
-
-    
-
-    
     min-width: 500px;
 }
 
@@ -34,7 +30,9 @@ body{
 .register_block .content{
     display: flex;
     flex-wrap: wrap;
-
+}
+.register_block .content label{
+    font-size: 15px;
 }
 .register_block  .content .columna1{
     position: relative;
@@ -48,9 +46,18 @@ body{
     padding: 25px;
 }
 
+.register_block .user,
+.register_block .contacto{
+    padding-top: 25px;
+}
+.register_block .content h3{
+    color: #7a7a7a;
+    text-align: center;
+    text-decoration: underline;
+}
+
 .register_block .bottom{
     position: relative;
-
     text-align: center;
 }
 
@@ -69,13 +76,15 @@ body{
 }
 
 .register_block input{
-    
     margin-bottom: 20px;
 }
 
 .register_block input[type="text"],
 .register_block input[type="password"],
-.register_block input[type="email"]
+.register_block input[type="email"],
+.register_block input[type="number"],
+.register_block input[type="date"],
+.register_block input[type="tel"]
 {
     width: 100%;
     border: none;
@@ -86,6 +95,17 @@ body{
     color: #3d3d3d;
     font-size: 25px;
     margin-left: 10px;
+}
+
+.register_block input[type="date"]{
+    font-size: 15px;
+}
+.register_block .sex{
+    display: flex;
+}
+
+.sex div{
+    flex: 1;
 }
 
 .register_block input[type="submit"],
@@ -122,5 +142,17 @@ body{
 
     .body{
         background: white;
+    }
+    .register_block .content .columna2,
+    .register_block .content .columna1{
+        padding: 0px;
+    }
+
+    .register_block .ubicacion{
+        padding-top: 25px;
+    }
+
+    .register_block .bottom{
+        padding-top: 50px;
     }
 }

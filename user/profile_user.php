@@ -6,11 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../CSS/estilos.css">
     <link rel="stylesheet" type="text/css" href="../CSS/estilos_popup.css">
     <link rel="stylesheet" type="text/css" href="../CSS/style-menu.css">
-    <link rel="stylesheet" type="text/css" href="css/style_comercio.css">
-
-	<link rel="icon" href="Logo.png" type="../img/text/png"/>
-
-	
+    <link rel="stylesheet" type="text/css" href="css/style_user.css">
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
@@ -18,16 +14,16 @@
     <script src="https://kit.fontawesome.com/5d5c86fd92.js" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="javascript/menu_tabs.js"></script>
+    <script src="js/menu_tabs.js"></script>
 
     <!-- se deja por la animacion del toggle -->
     <script src="../javascript/menu.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="../javascript/menu-nav.js"></script> 
     
-	<link rel="icon" href="Logo.png" type="img/Logo.png"/>
+	<link rel="icon" href="../img/Logo.png" type="img/Logo.png"/>
 
-    
+
 <title>Compra venta Zapala</title>
 	
 	
@@ -44,11 +40,11 @@
             
             <nav class="navegador" id="navegador" onClick="cambiarClase()">
 				<ul>
-					<li><a href="Indexs.php">Inicio</i> </menu-icon></a></li>
+					<li><a href="../Indexs.php">Inicio</i> </menu-icon></a></li>
 					<li><a href="HTML/galeria.html">Galeria</a></li>
 					<li><a href="comercios.php">Comercios</a></li>
-					<li><a id="btn-abrir-popup" class="btn-abrir-popup" href="#">login</i></a></li>
-					<li><a href="#">Buscar</a></li>
+                    <li><a id="btn-abrir-popup" class="btn-abrir-popup" href="#">login</i></a></li>
+                    <li><a href="#">Buscar</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -64,46 +60,23 @@
             <!-- menu por tabs -->
             <div class="wrap">
                 <ul class="tabs">
-                    <li><a href="#tab1"><span class="fa fa-home"></span><span class="tab-text">Descripcion</span></a></li>
-                    <li><a href="#tab2"><span><i class="fas fa-map-marker-alt"></i></span><span class="tab-text">Ubicacion</span></a></li>
-                    <li><a href="#tab3"><span><i class="fas fa-hashtag"></i></span><span class="tab-text">Redes</span></a></li>
-                    <li><a href="#tab4"><span><i class="far fa-images"></i></span><span class="tab-text">Fotos</span></a></li>
+                    <li><a href="#tab1"><span class="fa fa-home"></span><span class="tab-text">Editar Perfil</span></a></li>
+                    <li><a href="#tab2"><span><i class="fas fa-map-marker-alt"></i></span><span class="tab-text">Comercios</span></a></li>
                 </ul>
 
                 <div class="secciones">
                     <article id="tab1">
-                        <h1>Quienes somos</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea numquam odio voluptate. Aliquam incidunt similique, et quasi ducimus quos aut autem non dignissimos dicta sit provident, voluptatibus ut blanditiis perspiciatis cum, vel temporibus minima enim. Asperiores omnis placeat officiis a tenetur sit recusandae, reprehenderit neque. Tempora quibusdam, perferendis id ratione culpa dolorum! Nemo, animi? Eveniet eaque perspiciatis, libero quia, pariatur iusto, ipsum porro quod, ut tempora cum quo non illum. Non eligendi incidunt sequi, molestias quia perspiciatis architecto repudiandae quod.</p>
-                        <img src="../img/logozapala.png" alt="">
+                        <p>Espacio para la edicion de los datos personales del usuario</p>
                     </article>
                     <article id="tab2">
-                        <h1>Ubicanos</h1>
-                        <div class="map" id="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24840.947376955468!2d-70.07132396345207!3d-38.898407179570455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960d9ff8fa55857d%3A0x960e749816a3cd3!2s9%20de%20julio%2C%20Zapala%2C%20Neuqu%C3%A9n!5e0!3m2!1ses!2sar!4v1589496308117!5m2!1ses!2sar" width="100%" height="500px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
-                        </div>
-                    </article>
-                    <article id="tab3">
-                        <h1>Nuestras Redes</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum suscipit aliquam consequatur aspernatur, nulla sed veritatis natus omnis voluptate modi pariatur, error commodi consequuntur exercitationem obcaecati ex corporis facilis vel?</p>
-                        <div class="socials">
-                            <div class="face"><a href="#"><i class="fab fa-facebook icon"></i></a></div>
-                            <div class="mail"><a href="#"><i class="far fa-envelope icon"></i></a></div>
-                            <div class="cel"><a href="#"><i class="fab fa-whatsapp icon"></i>2942-123456</a></div>
-                        </div>
-                    </article>
-                    <article id="tab4">
-                        <h1>Galeria</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ratione minus dolorem delectus, beatae aliquid deleniti amet, ut itaque alias harum veniam eveniet atque? Ut non culpa quidem itaque facere.</p>
-                        <div class="imagen">
-                            <img src="../img/logozapala.png" alt="">
-                        </div>
+                        <p>espacio para los comercios de dicho usuario (con opcion a editar/bajar/subir</p>
                     </article>
                 </div>
 	        </div>
         </div>
 
         <aside>
+            <p>No se si poner categorias aca, no se que se puede poner</p>
             <h1>Categorias</h1>
             <nav class="categorias" id="navegador">
 				<ul>
@@ -142,6 +115,7 @@
 			</form>
 		</div>
 	</div>
+
 	<script src="../javascript/popup.js"></script>
 
     <!-- footer -->
@@ -163,7 +137,7 @@
                 <h4>Contactanos</h4>
                 <span>123456978</span>
                 <span>asda2@asdasda.com</span>
-                <a href="#"><img src="img/facebook-1.png" alt=""></a>
+                <a href="#"><img src="../img/facebook-1.png" alt=""></a>
             </div>
 
         </div>

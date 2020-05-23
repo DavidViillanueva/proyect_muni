@@ -43,7 +43,6 @@
 					<li><a href="HTML/galeria.html">Galeria</a></li>
 					<li><a href="comercios.php">Comercios</a></li>
 					<li><a id="btn-abrir-popup" class="btn-abrir-popup" href="#">login</i></a></li>
-					<li><a href="registrarse.php">Registrate</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -95,7 +94,7 @@
 					<input type="submit" class="btn-submit" value="Ingresar">
 
 					<a href="">¿Ha olvidado su contraseña?</a><br>
-					<a href="login/registro_cliente.php" >Registrarse</a>
+					<a href="login/registro_usuario.php" >Registrarse</a>
 				</div>
 			</form>
 		</div>
@@ -113,10 +112,8 @@
             <div class="links">
                 <h4>Links Relacionados</h4>
                 <ul>
-                    <li><a href="#">2asd</a></li>
-                    <li><a href="#">2asd</a></li>
-                    <li><a href="#">2asd</a></li>
-                    <li><a href="#">2asd</a></li>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Buscar</a></li>
                 </ul>
             </div>
             
