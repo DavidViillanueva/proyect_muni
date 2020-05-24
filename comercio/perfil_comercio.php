@@ -79,7 +79,7 @@
                     <article id="tab2">
                         <h1>Ubicanos</h1>
                         <div class="map" id="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24840.947376955468!2d-70.07132396345207!3d-38.898407179570455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960d9ff8fa55857d%3A0x960e749816a3cd3!2s9%20de%20julio%2C%20Zapala%2C%20Neuqu%C3%A9n!5e0!3m2!1ses!2sar!4v1589496308117!5m2!1ses!2sar" width="100%" height="500px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        <iframe src="" width="100%" height="500px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
                         </div>
                     </article>
