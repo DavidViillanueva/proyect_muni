@@ -1,0 +1,22 @@
+.register_block .content .produlocal{
+    display: flex;
+}
+
+.register_block .content .columna2{
+    text-align: center;
+}
+
+@media (max-width:450px){
+    .register_block{
+        height: 100%;
+        width: 100%;
+    }
+
+    .bottom{
+        padding-top: 100px;
+    }
+
+    .content{
+        padding-top: 50px;
+    }
+}

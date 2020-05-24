@@ -1,0 +1,51 @@
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.content .type1,
+.content .type2,
+.content .type3{
+    margin: 10px;
+    flex:1;
+    background: #c2d500;
+    color: #3d3d3d;
+    border-radius: 15px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.content span{
+    font-size: 100px;
+    margin: 15px;
+    margin-bottom: 3px;
+}
+.content p{
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 3px;
+
+    height: 0;
+    opacity: 0;
+}
+
+.bottom{
+    margin-top: 30px;
+}
+
+.content .type1:hover,
+.content .type2:hover,
+.content .type3:hover{
+    background: #b6ce00;
+    cursor: pointer;
+}
+
+
+@media (max-width:450px){
+    .content p{
+        height: 100%;
+        opacity: 1;
+        margin-bottom: 10px;
+    }
+}

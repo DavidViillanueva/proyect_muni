@@ -94,7 +94,7 @@
 					<input type="submit" class="btn-submit" value="Ingresar">
 
 					<a href="">¿Ha olvidado su contraseña?</a><br>
-					<a href="login/registro_usuario.php" >Registrarse</a>
+					<a href="user/registro_usuario.php" >Registrarse</a>
 				</div>
 			</form>
 		</div>
