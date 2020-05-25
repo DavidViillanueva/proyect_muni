@@ -31,14 +31,16 @@
                         <h3>Servicio</h3>
                         <p>Ofreces un servicio y vas al domicilio de tus clientes. Ej: Electricista.</p>
                     </div>
+                    <a href="registro_comercio.php">
                     <div class="type3" title="Tenes un comercio con habilitacion comercial, local y nombre registrado.">
                         <span class="fas fa-cash-register"></span>
                         <h3>Comercio</h3>
                         <p>Tenes un comercio con habilitacion comercial, local y nombre registrado.</p>
+                       
                     </div>
+                    </a>
                 </div>
             <div class="bottom">
-                    <input type="submit" value="Comencemos!">
                     <a href="../Indexs.php"><input type="button" value="Volver Inicio"></a>
             </div>
         </form>

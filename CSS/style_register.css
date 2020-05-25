@@ -84,7 +84,8 @@ body{
 .register_block input[type="email"],
 .register_block input[type="number"],
 .register_block input[type="date"],
-.register_block input[type="tel"]
+.register_block input[type="tel"],
+.register_block input[type="mail"]
 {
     width: 100%;
     border: none;

@@ -27,8 +27,7 @@
 	
 </head>
 
-<body>	
-	
+<body>
 	<header>
         <div class="contenedor">
             <div class="logo"></div>
