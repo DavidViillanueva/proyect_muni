@@ -10,7 +10,7 @@
     <style>     
       #map {
         height: 75%;
-        width: 75%;
+        width: 100%;
       }
       html, body {
         height: 100%;
@@ -19,11 +19,11 @@
       }
       #floating-panel {
         position: absolute;
-        top: 10px;
-        left: 25%;
+        top: 25px;
+        left: 50%;
         z-index: 5;
         background-color: #fff;
-        padding: 5px;
+        padding: 7px;
         border: 1px solid #999;
         text-align: center;
         font-family: 'Roboto','sans-serif';
@@ -36,7 +36,7 @@
   <body>
     <!-- Lugar para pasar la direccion-->
     <div id="floating-panel">
-      <input id="address" type="textbox" value="<?php echo $direccion.$localidad?>">
+      <input  hidden id="address" type="textbox" value="<?php echo $direccion.$localidad?>">
       <input id="submit" type="button" value="Buscar">
     </div>
 

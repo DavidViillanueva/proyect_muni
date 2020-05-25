@@ -1,3 +1,6 @@
+<?php 
+    include_once "../Google Maps/searchMaps.php";
+?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -72,14 +75,14 @@
 
                 <div class="secciones">
                     <article id="tab1">
-                        <h1>Quienes somos</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea numquam odio voluptate. Aliquam incidunt similique, et quasi ducimus quos aut autem non dignissimos dicta sit provident, voluptatibus ut blanditiis perspiciatis cum, vel temporibus minima enim. Asperiores omnis placeat officiis a tenetur sit recusandae, reprehenderit neque. Tempora quibusdam, perferendis id ratione culpa dolorum! Nemo, animi? Eveniet eaque perspiciatis, libero quia, pariatur iusto, ipsum porro quod, ut tempora cum quo non illum. Non eligendi incidunt sequi, molestias quia perspiciatis architecto repudiandae quod.</p>
+                        <h1><?php echo $nombre_proveedor ?></h1>
+                        <p><?php echo $descripcion ?></p>
                         <img src="../img/logozapala.png" alt="">
                     </article>
                     <article id="tab2">
                         <h1>Ubicanos</h1>
                         <div class="map" id="map">
-                        <iframe src="" width="100%" height="500px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        <iframe src="../Google Maps/map.php" width="100%" height="800px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe>
 
                         </div>
                     </article>
