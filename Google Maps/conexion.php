@@ -6,7 +6,7 @@
         $base = new PDO($dsn, $usuario, $contraseña);
         $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $base->exec("SET CHARACTER SET utf8");
-        echo "Conexion exitosa<br>";
+        //echo "Conexion exitosa<br>";
     } catch (PDOException $e) {
         print "¡Error al conectar!: " . $e->getMessage() . "<br/>".
         "Problema en la linea: ".$e->getLine()."<br>"."Fuente: ".$e->getFile();

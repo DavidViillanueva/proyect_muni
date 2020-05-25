@@ -80,9 +80,9 @@
                         <img src="../img/logozapala.png" alt="">
                     </article>
                     <article id="tab2">
-                        <h1>Ubicanos</h1>
+                        
                         <div class="map" id="map">
-                        <iframe src="../Google Maps/map.php" width="100%" height="800px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe>
+                         <iframe src="../Google Maps/map.php" width="100%" height="800px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe>
 
                         </div>
                     </article>

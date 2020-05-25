@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <style>     
       #map {
-        height: 75%;
+        height: 50%;
         width: 100%;
       }
       html, body {
@@ -19,29 +19,45 @@
       }
       #floating-panel {
         position: absolute;
-        top: 25px;
+        top: 29px;
         left: 50%;
         z-index: 5;
         background-color: #fff;
-        padding: 7px;
-        border: 1px solid #999;
+        padding: 0px;
+        border: 0px solid #999;
         text-align: center;
         font-family: 'Roboto','sans-serif';
         line-height: 30px;
         padding-left: 10px;
       }
+      div{
+        text-align:center;
+      }
+      #submit{
+        height: 40px;
+        width: 150px;
+        font-size:20px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight:bold;
+      }
+
+
+      
+     
     </style>
     
   </head>
   <body>
     <!-- Lugar para pasar la direccion-->
+    
+    
     <div id="floating-panel">
       <input  hidden id="address" type="textbox" value="<?php echo $direccion.$localidad?>">
-      <input id="submit" type="button" value="Buscar">
+      
     </div>
 
     <div id="map"></div>
-    
+    <div id = "boton"><input id="submit" type="button" value="Buscar" ></div>
     <script>
       function initMap() {
         //Visualizar Mapa.
