@@ -47,7 +47,7 @@
 
                         
                     </div>
-                    <div class="columna2">
+                    <div class="columna2 onlythis">
                         <div class="ubicacion">
                             <!-- direccion -->
                             <h3>Datos de ubicacion</h3>

@@ -42,8 +42,11 @@ body{
     flex:1;
     padding: 25px;
 }
-
 .register_block .content .columna2{
+    border-left: 1px solid black;
+}
+
+.register_block .content .onlythis{
     border-left: 1px solid black;
     border-right: 1px solid black;
 }
@@ -128,13 +131,14 @@ body{
     cursor: pointer;
 }
 
-@media (max-width:450px){
+@media (max-width:750px){
     .register_block{
         top: 0%;
         left: 0%;
         transform: translate(0,0);
         border-radius: 0px;
         min-width:0;
+        width: 100%;
     }
 
     .register_block .content{

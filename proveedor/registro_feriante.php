@@ -6,6 +6,7 @@
 	<link rel="icon" href="../img/Logo.png" type="text/png"/>
     <link rel="stylesheet" href="../CSS/style_register.css">
     <link rel="stylesheet" href="css/style_registro_comercio.css">
+    <link rel="stylesheet" href="css/style_registro_feriante.css">
     
 <title>Registro proveedor</title>
 	
