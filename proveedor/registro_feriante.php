@@ -8,6 +8,7 @@
     
     <link rel="stylesheet" href="css/style_registro_feriante.css">
     <link rel="stylesheet" href="css/style_registro_comercio.css">
+    <link rel="stylesheet" href="css/style_registro_feriante.css">
     
 <title>Registro proveedor</title>
 	
