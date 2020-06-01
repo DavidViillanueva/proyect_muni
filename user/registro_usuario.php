@@ -41,17 +41,11 @@
                             <div class="sex">
                                 <div><l><label for="hombre">Hombre</label><input type="radio" id="hombre" name="sexo" value="hombre" checked></l></div>
                                 <div><label for="mujer">Mujer</label><input type="radio" id="mujer" name="sexo" value="mujer" checked></div>
-                                <div><label for="nn">Omitir</label><input type="radio" id="nn" name="sexo" value="nn" checked></div>
+                                <div><label for="nn">Otro</label><input type="radio" id="nn" name="sexo" value="nn" checked></div>
                             </div>
                         </div>
 
-                        <div class="user">
-                            <h3>Usuario</h3>
-                            <label for="usuario">Usuario:</label>
-                            <input type="text" name="usuario" id="usuario" maxlength="50">
-                            <label for="password">Contraseña:</label>
-                            <input type="password" name="pass" id="pass" required autocomplete=off minlength="4">
-                        </div>
+                        
                     </div>
                     <div class="columna2">
                         <div class="ubicacion">
@@ -69,6 +63,9 @@
                             <input type="text" name="dpto" id="dpto" autocomplete=off maxlength="5">
                         </div>
 
+                        
+                    </div>
+                    <div class="columna3">
                         <div class="contacto">
                             <!-- datos contacto -->
                             <h3>Datos de contacto</h3>
@@ -76,6 +73,13 @@
                             <input type="email" name="mail" id="mail" required autocomplete=off>
                             <label for="tel">Telefono:</label>
                             <input type="tel" name="tel" id="tel" require>
+                        </div>
+                        <div class="user">
+                            <h3>Usuario</h3>
+                            <label for="usuario">Usuario:</label>
+                            <input type="text" name="usuario" id="usuario" maxlength="50">
+                            <label for="password">Contraseña:</label>
+                            <input type="password" name="pass" id="pass" required autocomplete=off minlength="4">
                         </div>
                     </div>
                 </div>

@@ -34,22 +34,21 @@ body{
 .register_block .content label{
     font-size: 15px;
 }
-.register_block  .content .columna1{
+
+.register_block .content .columna1,
+.register_block .content .columna2,
+.register_block .content .columna3{
     position: relative;
     flex:1;
     padding: 25px;
 }
 
 .register_block .content .columna2{
-    position: relative;
-    flex:1;
-    padding: 25px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
-.register_block .user,
-.register_block .contacto{
-    padding-top: 25px;
-}
+
 .register_block .content h3{
     color: #7a7a7a;
     text-align: center;
@@ -57,6 +56,7 @@ body{
 }
 
 .register_block .bottom{
+    margin-top: 30px;
     position: relative;
     text-align: center;
 }
@@ -155,5 +155,9 @@ body{
 
     .register_block .bottom{
         padding-top: 50px;
+    }
+    .register_block .content .columna2{
+        border-left: none;
+        border-right: none;
     }
 }
