@@ -7,6 +7,7 @@
 .content a{
     flex: 1;
     text-decoration: none;
+    margin: 10px;
 }
 .content .type1,
 .content .type2,
@@ -51,7 +52,7 @@
 }
 
 
-@media (max-width:450px){
+@media (max-width:750px){
     .content p{
         height: 100%;
         opacity: 1;
