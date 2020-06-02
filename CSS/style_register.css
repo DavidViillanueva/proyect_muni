@@ -131,6 +131,16 @@ body{
     cursor: pointer;
 }
 
+@media(max-width: 1200px){
+    .register_block{
+        transform: translate(0,0);
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        border-radius: 0px;
+    }
+}
+
 @media (max-width:750px){
     .register_block{
         top: 0%;
