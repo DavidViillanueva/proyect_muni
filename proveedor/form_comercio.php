@@ -1,3 +1,15 @@
+<?php
+    // bloque de conexion (buscar para realizarlo en una sola carpeta)
+    include_once "php/conexion.php";
+
+    $id = $_GET['id'];
+    
+    $resultado = $base->query("SELECT *
+        FROM categoria_comercio");
+        $resultado = $resultado->fetchAll();
+
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -17,7 +29,7 @@
 	<main class="main">
 		
 		<div class="register_block">
-        <form action="select_type.php" method="post">
+        <form action="php/registrar_comercio.php?id=<?php echo($id) ?>" method="post">
                 <div class="header">
                     <h1>Registrate como comercio</h1>
                 </div>
@@ -26,21 +38,20 @@
                         <h3>Datos de Comercio</h3>
                         <!-- nombre fantasia  -->
                         <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" maxlength="40" requiered>
+                        <input type="text" name="nombre" id="nombre" maxlength="40" required>
                         <!-- licencia comercial -->
                         <label for="licencia">Licencia comercial</label>
-                        <input type="number" name="licencia" id="licencia" maxlength="30" requiered>
-                        <!-- rubro -->
-                        <label for="rubro">Rubro</label>
-                        <select name="rubro" id="rubro">
-                            <!-- cargar por php foreach de la tabla rubro -->
-                            <option value="1">1</option>
-                        </select>
+                        <!-- <?php if($restore_posible=='1'):?>
+                            <font color="#bd2424" size="2px">Se cambio la contraseña correctamente!</font>
+                        <?php endif; ?>  -->
+                        <input type="number" name="licencia" id="licencia" maxlength="30" required>
                         <!-- categoria -->
                         <label for="categ">Categoria</label>
                         <select name="categ" id="categ">
                             <!-- cargar por php foreach de la tabla rubro -->
-                            <option value="2">2</option>
+                            <?php foreach ($resultado as $valor): ?>
+                                <option value="<?php echo($valor['id categoria_comercio'])?>"> <?php echo($valor['nombre'])?> </option>
+                            <?php endforeach; ?>
                         </select>
                         
                         
@@ -56,7 +67,7 @@
                             <input type="mail" name="mail" id="mail" maxlength="50">
                             <!-- tel -->
                             <label for="telefono">Telefono</label>
-                            <input type="number" name="telefono" id="telefono" maxlength="20">
+                            <input type="number" name="telefono" id="telefono" maxlength="20" required>
 
                         <!-- delivery -->
                         <div class="delivery">
