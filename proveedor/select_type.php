@@ -1,3 +1,8 @@
+<?php
+    // $id_user = $_GET['id'];
+    $id_user=2;
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -21,7 +26,7 @@
                     <h1>¿Que tipo de proveedor sos?</h1>
                 </div>
                 <div class="content">
-                    <a href="registro_feriante.php">
+                    <a href="form_feriante.php?id=<?php echo($id_user)?>">
                         <div class="type1" title="Comercias cosas hechas con tus propias manos! No contas con habilitacion ni local fisico.">
                                 <span class="fas fa-store icon"></span>
                                 <h3>Feriante</h3>
@@ -29,7 +34,7 @@
                         </div>
                     </a>
 
-                    <a href="registro_servicio.php">
+                    <a href="form_servicio.php?id=<?php echo($id_user)?>">
                         <div class="type2" title="Ofreces un servicio en el domicilio de tus clientes. Ej: Electricista.">
                                 <span class="fas fa-tools"></span>
                                 <h3>Servicio</h3>
@@ -37,7 +42,7 @@
                         </div>
                     </a>
 
-                    <a href="registro_comercio.php">
+                    <a href="form_comercio.php?id=<?php echo($id_user)?>">
                         <div class="type3" title="Tenes un comercio con habilitacion comercial, local y nombre registrado.">
                                 <span class="fas fa-cash-register"></span>
                                 <h3>Comercio</h3>
