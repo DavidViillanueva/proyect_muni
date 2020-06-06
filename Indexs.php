@@ -39,8 +39,8 @@
             <nav class="navegador" id="navegador" onClick="cambiarClase()">
 				<ul>
 					<li><a href="Indexs.php">Inicio</i> </menu-icon></a></li>
-					<li><a href="HTML/galeria.html">Galeria</a></li>
-					<li><a href="comercios.php">Comercios</a></li>
+					<li><a href="#">Buscar</a></li>
+					<li><a href="#">Comercios</a></li>
 					<li><a id="btn-abrir-popup" class="btn-abrir-popup" href="#">login</i></a></li>
 				</ul>
 			</nav>
