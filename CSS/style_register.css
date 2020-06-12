@@ -64,6 +64,10 @@ body{
     text-align: center;
 }
 
+.register_block .text{
+    margin-bottom: 20px;
+}
+
 .register_block h1{
     margin: 0;
     padding: 0 0 20px;
@@ -131,13 +135,13 @@ body{
     cursor: pointer;
 }
 
-@media(max-width: 1200px){
+@media(max-width: 1500px){
     .register_block{
-        transform: translate(0,0);
-        top: 0%;
-        left: 0%;
-        width: 100%;
+        transform: translate(-50%,0);
+        top: 10%;
+        left: 50%;
         border-radius: 0px;
+        width: 70%;
     }
 }
 

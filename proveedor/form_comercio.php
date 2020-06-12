@@ -2,12 +2,42 @@
     // bloque de conexion (buscar para realizarlo en una sola carpeta)
     include_once "php/conexion.php";
 
+    $licencia = isset($_POST['licencia'])?$_POST['licencia'] : null;
+
     // inicia la sesion para poder dar uso de las variables
     session_start();
     var_dump($_SESSION['cuilt']);
     var_dump($_SESSION['rubro']);
     var_dump($_SESSION['plocal']);
     var_dump($_SESSION['id']);
+    //si tenemos el paarametro next quiere decir que debemos ir a buscar el dato faltante de la direccion
+    if(isset($_GET['next'])){
+        $next = $_GET['next'];
+        if($next == "1"){
+            // hacemos la comprobacion de licencias en este punto
+            //Validacion de la licencia comercial (no puede repetirse)
+            $licencias_cargadas = $base->query(
+            "SELECT licencia_comercial 
+            FROM comercio 
+            WHERE licencia_comercial=$licencia")->fetchAll();
+
+            if(count($licencias_cargadas)==0){
+                // en este punto se hizo click en el "boton" next
+                $_SESSION['nombre'] = isset($_POST['nombre'])?$_POST['nombre'] : null;
+                $_SESSION['licencia'] = $licencia;
+                $_SESSION['categ'] = isset($_POST['categ'])?$_POST['categ'] : null;
+                $_SESSION['website'] = isset($_POST['website'])?$_POST['website'] : null;
+                $_SESSION['mail'] = isset($_POST['mail'])?$_POST['mail'] : null;
+                $_SESSION['telefono'] = isset($_POST['telefono'])?$_POST['telefono'] : null;
+                $_SESSION['delivery'] = isset($_POST['delivery'])?$_POST['delivery'] : null;
+                $_SESSION['descripcion'] = isset($_POST['descripcion'])?$_POST['descripcion'] : null;
+                header("location: ../form_ubicacion.php");
+            }else{
+                //Existe una licencia previamente cargada(volvemos con ese parametro lc=licencia cargada)
+                header("Location: ?lc=1");
+            }
+        }
+    } 
 
     // vemos si la licencia retorna con problemas de registrar_comercio.php
     $lc = isset($_GET['lc'])? $_GET['lc'] : null;
@@ -37,7 +67,7 @@
 	<main class="main">
 		
 		<div class="register_block">
-        <form action="php/registrar_comercio.php" method="post">
+        <form action="?next=1" method="post">
                 <div class="header">
                     <h1>Registrate como comercio</h1>
                 </div>
@@ -83,7 +113,8 @@
                             <label for="delivery">Delivery</label>
                         </div>
 
-                </div>
+                    </div>
+                    
             <div class="bottom">
                     <!-- descripcion -->
                     <div class="text">
@@ -91,7 +122,7 @@
                     <textarea name="descripcion" id="descripcion" cols="60" rows="5"></textarea>
                     </div>
 
-                    <input type="submit" -value="Siguiente">
+                    <input type="submit" value="Direccion">
                     <a href="select_type.php"><input type="button" value="Volver"></a>
             </div>
         </form>

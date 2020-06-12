@@ -1,13 +1,11 @@
 <?php
-    // tomamos las variables del formulario de registro de comercio
-    $nombre_comercio = $_POST['nombre'];
-    $licencia = $_POST['licencia'];
-    $id_categoria = $_POST['categ'];
-    $descripcion = $_POST['descripcion'];
-    $delivery = $_POST['delivery'];
-    $website = $_POST['website'];
-    $mail = $_POST['mail'];
-    $telefono = $_POST['telefono'];
+    // tomamos las variables del formulario de ubicacion
+    $barrio = isset($_POST['barrio'])?$_POST['barrio'] : null;
+    $calle = isset($_POST['calle'])?$_POST['calle'] : null;
+    $altura = isset($_POST['altura'])?$_POST['altura'] : null;
+    $piso = isset($_POST['piso'])?$_POST['piso'] : null;
+    $departamento = isset($_POST['dpto'])?$_POST['dpto'] : null;
+    
 
      // inicia la sesion para poder dar uso de las variables
      session_start();
@@ -42,6 +40,7 @@
             ));
 
             $id_proveedor = $base->lastInsertId("proveedor");
+            // cargamos la direccion del comercio *hacer las modificaciones en el formulario
 
             // cargamos al comercio
             $base->prepare("INSERT INTO comercio(id_proveedor,id_domicilio,id_rubro,id_categoria,nombre_comercio,delivery,licencia_comercial,pagina_web,mail,descripcion,telefono_comercial)
