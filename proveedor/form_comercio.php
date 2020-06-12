@@ -2,12 +2,20 @@
     // bloque de conexion (buscar para realizarlo en una sola carpeta)
     include_once "php/conexion.php";
 
-    $id = $_GET['id'];
-    
+    // inicia la sesion para poder dar uso de las variables
+    session_start();
+    var_dump($_SESSION['cuilt']);
+    var_dump($_SESSION['rubro']);
+    var_dump($_SESSION['plocal']);
+    var_dump($_SESSION['id']);
+
+    // vemos si la licencia retorna con problemas de registrar_comercio.php
+    $lc = isset($_GET['lc'])? $_GET['lc'] : null;
+
+    // consulta para llenar el cuadro de opciones
     $resultado = $base->query("SELECT *
         FROM categoria_comercio");
         $resultado = $resultado->fetchAll();
-
 ?>
 
 <!doctype html>
@@ -29,7 +37,7 @@
 	<main class="main">
 		
 		<div class="register_block">
-        <form action="php/registrar_comercio.php?id=<?php echo($id) ?>" method="post">
+        <form action="php/registrar_comercio.php" method="post">
                 <div class="header">
                     <h1>Registrate como comercio</h1>
                 </div>
@@ -41,16 +49,16 @@
                         <input type="text" name="nombre" id="nombre" maxlength="40" required>
                         <!-- licencia comercial -->
                         <label for="licencia">Licencia comercial</label>
-                        <!-- <?php if($restore_posible=='1'):?>
-                            <font color="#bd2424" size="2px">Se cambio la contraseña correctamente!</font>
-                        <?php endif; ?>  -->
+                            <?php if($lc=='1'):?>
+                            <font color="#bd2424" size="2px">La licencia ya fue cargada!</font>
+                            <?php endif; ?>
                         <input type="number" name="licencia" id="licencia" maxlength="30" required>
                         <!-- categoria -->
                         <label for="categ">Categoria</label>
                         <select name="categ" id="categ">
                             <!-- cargar por php foreach de la tabla rubro -->
                             <?php foreach ($resultado as $valor): ?>
-                                <option value="<?php echo($valor['id categoria_comercio'])?>"> <?php echo($valor['nombre'])?> </option>
+                                <option value="<?php echo($valor['id_categoria_comercio'])?>"> <?php echo($valor['nombre'])?> </option>
                             <?php endforeach; ?>
                         </select>
                         
@@ -83,7 +91,7 @@
                     <textarea name="descripcion" id="descripcion" cols="60" rows="5"></textarea>
                     </div>
 
-                    <input type="submit" value="Siguiente">
+                    <input type="submit" -value="Siguiente">
                     <a href="select_type.php"><input type="button" value="Volver"></a>
             </div>
         </form>
