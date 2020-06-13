@@ -68,6 +68,14 @@
 			<div class="contenedor2">
 				<ul>
 					<li>
+						<img src="img/ubicacion.jpg" alt="">
+						<p>
+						   Búsqueda por cercanía, 
+						   encontrar de manera sencilla productos y/o servicios. 
+
+						</p>
+					</li>
+					<li>
 						<img src="img/imagen1.jpg" alt="">
 						<p>
 						   Publicidad para potenciar tu negocio obteniendo mayor visibilidad comercial 
