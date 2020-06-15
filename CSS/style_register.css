@@ -129,6 +129,15 @@ body{
     position: relative;
 }
 
+/* para registro ubicacion */
+.register_block .localidad{
+    display: flex;
+}
+.register_block .localidad input{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 .register_block input[type="submit"]:hover,
 .register_block input[type="button"]:hover{
     background: #b6ce00;
@@ -177,5 +186,9 @@ body{
     .register_block .content .columna2{
         border-left: none;
         border-right: none;
+    }
+
+    .register_block .localidad{
+        display: block
     }
 }
