@@ -5,13 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
 
-	<link rel="icon" href="Logo.png" type="img/text/png"/>
+	<link rel="icon" href="img/Logo.png" type="img/text/png"/>
 
 	<link rel="stylesheet" type="text/css" href="CSS/estilos_popup.css">
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-
-	<link rel="icon" href="Logo.png" type="img/text/Logo.png"/>
 
 	<link rel="stylesheet" type="text/css" href="CSS/contenedor2.css">
 	
@@ -20,7 +18,7 @@
 	
 </head>
 
-<body background="fondoazul2.png">	
+<body background="img/fondoazul2.png">	
 	<header class="header">
 		
 		 <div class="contenedor logo_nav_contenedor">
@@ -31,8 +29,8 @@
 					<li><a href="Indexs.php">Inicio</a></li>
 					<li><a href="#">Galeria</a></li>
 					<li><a href="#">Comercios</a></li>
-					<li><a id="#" class="btn-abrir-popup" href="#">login</a></li>
-					<li><a href="#">Registrate</a></li>
+					<li><a id="btn-abrir-popup" class="btn-abrir-popup" href="#">login</a></li>
+					<li><a href=" ../registrarse.php ">Registrate</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -41,7 +39,7 @@
 	<main class="main" style="text-align: justify">
 		<div class="contenedor">
 			<img class="quedatecasa" src="img/quedateencasa.jpg" alt="">
-			<h1 align="center">Sitio Bajo Construcción.</h1>
+			<h1 color="#ooo" align="center">Sitio Bajo Construcción.</h1>
 			<h2 align="center">Bienvenidos a ZapalaComercial.com.ar</h2>
 			<h3 align="left">A quién va dirigido...</h3>
 		
