@@ -1,64 +1,46 @@
 <?php 
-
-    session_start();
-    echo("nombre: ".$_SESSION['nombre']);
-    echo("<br>");
-    echo("licencia: ".$_SESSION['licencia']);
-    echo("<br>");
-    echo("categoria: ".$_SESSION['categ']);
-    echo("<br>");
-    echo("website: ".$_SESSION['website']);
-    echo("<br>");
-    echo("mail: ".$_SESSION['mail']);
-    echo("<br>");
-    echo("telefono: ".$_SESSION['telefono']);
-    echo("<br>");
-    echo("delivery: ".$_SESSION['delivery']);
-    echo("<br>");
-    echo("descripcion: ".$_SESSION['descripcion']);
-    echo("<br>");
-    echo("cuilt: ".$_SESSION['cuilt']);
-    echo("<br>");
-    echo("rubro: ".$_SESSION['rubro']);
-    echo("<br>");
-    echo("producto local: ".$_SESSION['plocal']);
-    echo("<br>");
-    echo("id usuario: ".$_SESSION['id']);
-    echo("<br>");
-
     include_once("proveedor/php/conexion.php");
-    $localidades = $base->query("SELECT * 
-                            FROM localidad")->fetchAll(PDO::FETCH_ASSOC);
-    $provincias = $base->query("SELECT * FROM provincia")->fetchAll(PDO::FETCH_ASSOC);
 
-    $hola= "Hola";
+    $provincias = $base->query("SELECT nombre,id_provincia 
+                            FROM provincia")->fetchAll(PDO::FETCH_ASSOC);
+
+    var_dump($provincias[0]['nombre']);
 ?>
 
 <!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="img/Logo.png" type="text/png"/>
-        <link rel="stylesheet" href="CSS/style_register.css">
-        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/Logo.png" type="text/png"/>
+    <link rel="stylesheet" href="CSS/style_register.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+
     <title>Registro proveedor</title>
     <script type="text/javascript">
-            // funcion para autocompletar el CP
-            function codigoPostal()
-            {   
-                var localidad = document.getElementById("localidad").value;
-                
-                if(localidad!=""){
-                    document.getElementById("cp").style.display = "none";
-                    document.getElementById("label_cp").style.display = "none";
-                }else{
-                    document.getElementById("cp").style.display = "flex";
-                    document.getElementById("label_cp").style.display = "flex";
-                }
-            }
-    </script>
+	$(document).ready(function(){
+		$('#provincia').val(1);
+		recargarLista();
 
+		$('#provincia').change(function(){
+			recargarLista();
+		});
+	})
+    </script>
+    <script type="text/javascript">
+        function recargarLista(){
+            $('#cargando').css("display", "inline");
+            $.ajax({
+                type:"POST",
+                url:"recarga_localidades.php",
+                data:"provincia=" + $('#provincia').val(),
+                success:function(r){
+                    $('#cargando').css("display", "none");
+                    $('#local').html(r);
+                }
+            });
+        }
+    </script>
 </head>
 
 
@@ -81,21 +63,16 @@
                                 <input list="provin" name="provincia" id="provincia">
                                 <datalist id="provin">
                                     <?php foreach($provincias as $valor): ?>
-                                    <option> <?= $valor['nombre'] ?></option>
+                                    <option value="<?php echo(addslashes($valor['nombre'])) ?>" ><?= $valor['id_provincia'] ?></option>
                                     <?php endforeach; ?>
                                 </datalist>
                             </div>
-                            <div class="localidad">
-                                <label for="local">Localidad</label>
-                                <input list="local" name="localidad" id="localidad" onChange="codigoPostal();">
-                                <datalist id="local">
-                                    <?php foreach($localidades as $clave): ?>
-                                    <option value="<?= $clave['nombre'] ?>"> <?= $clave['codigo_postal'] ?></option>
-                                    <?php endforeach; ?>
-                                </datalist>
-                                <label for="cp" id="label_cp">C.P.</label>
-                                <input type="number" name="cp" id="cp" maxlength=4>
+                            <div class="localidad_carga" style="display:flex;">
+                                <div class="localidad" id="local"></div>
+                                <div id="cargando" style="display:block;"><img src="img/ajax-loader.gif" alt="" srcset=""></div>
                             </div>
+
+                            
 
 
                             <label for="text">Barrio:</label>
@@ -120,3 +97,4 @@
     </main>
 </body>
 </html>
+

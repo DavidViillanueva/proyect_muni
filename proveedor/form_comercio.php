@@ -6,10 +6,6 @@
 
     // inicia la sesion para poder dar uso de las variables
     session_start();
-    var_dump($_SESSION['cuilt']);
-    var_dump($_SESSION['rubro']);
-    var_dump($_SESSION['plocal']);
-    var_dump($_SESSION['id']);
     //si tenemos el paarametro next quiere decir que debemos ir a buscar el dato faltante de la direccion
     if(isset($_GET['next'])){
         $next = $_GET['next'];
@@ -23,14 +19,19 @@
 
             if(count($licencias_cargadas)==0){
                 // en este punto se hizo click en el "boton" next
-                $_SESSION['nombre'] = isset($_POST['nombre'])?$_POST['nombre'] : null;
-                $_SESSION['licencia'] = $licencia;
-                $_SESSION['categ'] = isset($_POST['categ'])?$_POST['categ'] : null;
-                $_SESSION['website'] = isset($_POST['website'])?$_POST['website'] : null;
-                $_SESSION['mail'] = isset($_POST['mail'])?$_POST['mail'] : null;
-                $_SESSION['telefono'] = isset($_POST['telefono'])?$_POST['telefono'] : null;
-                $_SESSION['delivery'] = isset($_POST['delivery'])?$_POST['delivery'] : null;
-                $_SESSION['descripcion'] = isset($_POST['descripcion'])?$_POST['descripcion'] : null;
+                include_once "proveedor.php";
+                $comercio = new comercio();
+                $comercio->setComercio( $_POST['nombre'],
+                                        $_POST['licencia'],
+                                        $_POST['categ'],
+                                        $_POST['website'],
+                                        $_POST['mail'],
+                                        $_POST['telefono'],
+                                        $_POST['delivery'],
+                                        $_POST['descripcion']
+                                    );
+
+                $_SESSION['comercio'] = serialize($comercio);
                 header("location: ../form_ubicacion.php");
             }else{
                 //Existe una licencia previamente cargada(volvemos con ese parametro lc=licencia cargada)

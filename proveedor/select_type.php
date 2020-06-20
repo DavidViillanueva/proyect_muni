@@ -1,14 +1,12 @@
 <?php
     // levantamos la sesion para tener los datos de el formulario proveedor
     session_start();
-    var_dump($_SESSION['cuilt']);
-    var_dump($_SESSION['rubro']);
-    var_dump($_SESSION['plocal']);
-    var_dump($_SESSION['id']);
-
-
     $type = isset($_GET['type'])? $_GET['type'] : null;
 
+    include_once "proveedor.php";
+    $proveedor = $_SESSION['proveedor'];
+    $proveedor = unserialize($proveedor);
+    $proveedor = $proveedor->getProveedor();
     if($type!=null){
         if($type==1){
             // feriante

@@ -1,7 +1,7 @@
 <?php
     include_once "php/conexion.php";
-    // $id = $_GET['id'];
-    $id = 2;
+    // $id = $_GET['id']; el id se va a tomar por url, enviada desde el perfil de usuario
+    $id = 1;
 
     // iniciamos la sesion para almacenar las viariables de este formulario antes de pasar al siguiente
     // previo comprobamos que sea una llamada recursiva
@@ -11,7 +11,7 @@
         $result = $base->prepare(
             "SELECT DNI
             FROM persona
-            WHERE `id_persona` = :id"
+            WHERE id_persona = :id"
         );
         $result->execute(array(":id"=>$id));
         //obtenemos el array y pedimos solamente el elemento indexado como DNI (fetch assoc nos permite buscar por nombre de campo)
@@ -22,12 +22,14 @@
         $cuilt = isset($_POST['cuilt']) ? $_POST['cuilt'] : null;
         if(preg_match($dni,$cuilt)){
             // En este punto sabemos que el cuilt puede corresponder al dni ingresado
-            // se graban todas las variables
-            $_SESSION['cuilt'] = isset($_POST['cuilt'])? $_POST['cuilt']:null;
-            $_SESSION['rubro'] = isset($_POST['rubro'])? $_POST['rubro']:null;
-            $_SESSION['plocal'] = isset($_POST['plocal'])? $_POST['plocal']:null;
-            $_SESSION['id'] = $id;
-        
+            // se graban el proveedor en la sesion
+            include_once "proveedor.php";
+            $rubro = $_POST['rubro'];
+            $plocal = $_POST['plocal'];
+            $proveedor = new proveedor();
+            $proveedor->setProveedor($cuilt,$rubro,$plocal,$id);
+            // se serializa para mantener los metodos
+            $_SESSION['proveedor'] = serialize($proveedor);
             // se va al siguiente formulario
             header("location: select_type.php");
         }else{
