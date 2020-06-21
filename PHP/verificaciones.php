@@ -5,15 +5,23 @@
             // funcion para verificar el cuilt cuit, Villanueva
             $dni_array = array();
             $dni_array = str_split($dni);
-
             $multiplicador = array(5, 4, 3, 2, 7, 6, 5, 4, 3, 2);
-            foreach($dni_array as $caracter_dni)
-                $suma += $multiplicador * (int)$caracter_dni;
-
+            for($i=0;$i<count($dni_array);$i++){
+                $suma += $multiplicador[$i] * (int)$dni_array[$i];
+            }
             $resto = $suma%11;
-
-            $nuevo_validador = $resto == 0 ? 0 : $resto == 1 ? 9 : 11 - $resto;
-
+            if($resto==0){
+                $nuevo_validador = 0;
+            }elseif($resto==1){
+                if(substr($dni_array,0,2)=="27"){
+                    // si es mujer
+                    $nuevo_validador = 4;
+                }elseif(substr($dni_array,0,2)=="23"){
+                    $nuevo_validador = 9;
+                }
+            }else{
+                $nuevo_validador = 11-$resto;
+            }
             if($nuevo_validador==$validador){
                 return true;
             }else{
@@ -27,12 +35,14 @@
             if(count($cuilt_array)==11){
                 // el cuit/cuil coincide con el largo, hay que obtener un substring que tenga el dni
                 // el formato es XY-DNI-CV (cv codigo verificador) xy-123456789-z
-                $dni = substr($cuilt,2,-1);
+                $dni = substr($cuilt,0,-1);
                 $cv = substr($cuilt,-1);
-                if(validacion($dni,$cv))
+                $validador = new verificacion();
+                if($validador->validacion($dni,$cv))
                     return true;
                 else
                     return false;
+                return true;
             }else{
                 return false;
             }

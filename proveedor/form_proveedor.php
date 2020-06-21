@@ -7,20 +7,10 @@
     // previo comprobamos que sea una llamada recursiva
     if(isset($_POST['cuilt'])){
         session_start();
-        // comprobamos que el cuit ingresado pueda corresponder al usuario
-        $result = $base->prepare(
-            "SELECT DNI
-            FROM persona
-            WHERE id_persona = :id"
-        );
-        $result->execute(array(":id"=>$id));
-        //obtenemos el array y pedimos solamente el elemento indexado como DNI (fetch assoc nos permite buscar por nombre de campo)
-        $dni = $result->fetch(PDO::FETCH_ASSOC)['DNI'];
-        //como nos devuelve un string hacemos uso de la funcion pregmatch para ver si el dni esta dentro del cuit/cuil
-        // Le agregamos las 2 barras para que el pregmatch busque la coincidencia en todo el string objetivo
-        $dni = "/".$dni."/";
-        $cuilt = isset($_POST['cuilt']) ? $_POST['cuilt'] : null;
-        if(preg_match($dni,$cuilt)){
+        include_once "../PHP/verificaciones.php";
+        $verificacion = new verificacion();
+        $valor = $verificacion->verificacionCuilCuit($_POST['cuilt']);
+        if($verificacion->verificacionCuilCuit($_POST['cuilt'])){
             // En este punto sabemos que el cuilt puede corresponder al dni ingresado
             // se graban el proveedor en la sesion
             include_once "proveedor.php";
@@ -31,9 +21,10 @@
             // se serializa para mantener los metodos
             $_SESSION['proveedor'] = serialize($proveedor);
             // se va al siguiente formulario
+            echo("correcto");
             header("location: select_type.php");
         }else{
-            // el cuil no puede ser del usuario 
+            // el cuil no puede ser del usuario
             echo("cuil no corresponde");
             header("location: ?cnp=1");
         }
@@ -56,16 +47,13 @@
 	<link rel="icon" href="../img/Logo.png" type="text/png"/>
     <link rel="stylesheet" href="../CSS/style_register.css">
     <link rel="stylesheet" href="css/style_registro_proveedor.css">
-    
 <title>Registro proveedor</title>
-	
 
 </head>
 
 
 <body>
 	<main class="main">
-		
 		<div class="register_block">
         <form action="#" method="post">
                 <div class="header">
@@ -77,7 +65,7 @@
                         <label for="cuilt">Ingresa tu cuil/cuit</label>
                             <!-- mensaje de error -->
                             <?php if($cnp =='1'):?>
-                            <font color="#bd2424" size="2px">El cuil/cuit ingresado no corresponde al DNI!</font>
+                            <font color="#bd2424" size="2px">El cuil/cuit ingresado no es valido</font>
                             <?php endif; ?>
                         <input type="text" name="cuilt" id="cuilt" required maxlength="20">
 
@@ -89,13 +77,11 @@
                             <?php endforeach; ?>
                         </select>
                     </div>
-                    
                     <div class="columna2">
                         <div class="plocal">
                             <input type="checkbox" id="plocal" name="plocal" checked>
                             <label for="plocal">Productor local</label>
                         </div>
-                        
                     </div>
                 </div>
             <div class="bottom">
