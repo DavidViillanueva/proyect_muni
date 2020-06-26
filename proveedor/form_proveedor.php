@@ -14,12 +14,13 @@
             // En este punto sabemos que el cuilt puede corresponder al dni ingresado
             // se graban el proveedor en la sesion
             include_once "proveedor.php";
+            $cuilt = $_POST['cuilt'];
             $rubro = $_POST['rubro'];
             $plocal = $_POST['plocal'];
             $proveedor = new proveedor();
             $proveedor->setProveedor($cuilt,$rubro,$plocal,$id);
             // se serializa para mantener los metodos
-            $_SESSION['proveedor'] = serialize($proveedor);
+            $_SESSION['proveedor'] = serialize($proveedor->getProveedor());
             // se va al siguiente formulario
             echo("correcto");
             header("location: select_type.php");

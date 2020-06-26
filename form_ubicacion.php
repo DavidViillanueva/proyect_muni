@@ -1,10 +1,14 @@
-<?php 
+<?php
     include_once("proveedor/php/conexion.php");
 
-    $provincias = $base->query("SELECT nombre,id_provincia 
+    $provincias = $base->query("SELECT nombre,id_provincia
                             FROM provincia")->fetchAll(PDO::FETCH_ASSOC);
+    session_start();
 
-    var_dump($provincias[0]['nombre']);
+    include_once "proveeedor/proveedor.php";
+    session_start();
+    $comercio = unserialize($_SESSION['comercio']);
+    var_dump($comercio);
 ?>
 
 <!doctype html>
@@ -46,7 +50,6 @@
 
 <body>
     <main class="main">
-        
         <div class="register_block">
         <form action="proveedor/php/registrar_comercio.php" method="post">
                 <div class="header">
@@ -72,7 +75,7 @@
                                 <div id="cargando" style="display:block;"><img src="img/ajax-loader.gif" alt="" srcset=""></div>
                             </div>
 
-                            
+
 
 
                             <label for="text">Barrio:</label>
@@ -85,8 +88,8 @@
                             <input type="number" name="piso" id="piso" autocomplete=off maxlength="5">
                             <label for="text">Departamento:</label>
                             <input type="text" name="dpto" id="dpto" autocomplete=off maxlength="5">
-                        </div> 
-                    </div>    
+                        </div>
+                    </div>
                 </div>
             <div class="bottom">
                     <input type="submit" -value="Siguiente">

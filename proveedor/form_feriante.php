@@ -7,16 +7,13 @@
     <link rel="stylesheet" href="../CSS/style_register.css">
     <link rel="stylesheet" href="css/style_registro_comercio.css">
     <link rel="stylesheet" href="css/style_registro_feriante.css">
-    
 <title>Registro proveedor</title>
-	
 
 </head>
 
 
 <body>
 	<main class="main">
-		
 		<div class="register_block">
         <form action="select_type.php" method="post">
                 <div class="header">

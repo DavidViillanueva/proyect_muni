@@ -33,13 +33,12 @@
         private $delivery;
         private $descripcion;
 
-        public function setComercio($nombre,$licencia,$categoria,$website,$mail,$telefono,$delivery,$descripcion){
+        public function setComercio($nombre,$licencia,$categoria,$website,$mail,$delivery,$descripcion){
             $this->nombre = $nombre;
             $this->licencia = $licencia;
             $this->categoria = $categoria;
             $this->website = $website;
             $this->mail = $mail;
-            $this->telefono = $telefono;
             $this->delivery = $delivery;
             $this->descripcion = $descripcion;
         }
@@ -51,11 +50,10 @@
                 "categoria"=>$this->categoria,
                 "website"=>$this->website,
                 "mail"=>$this->mail,
-                "telefono"=>$this->telefono,
                 "delivery"=>$this->delivery,
                 "descripcion"=>$this->descripcion
             );
         }
     }
-    
+
 ?>

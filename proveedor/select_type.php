@@ -3,10 +3,7 @@
     session_start();
     $type = isset($_GET['type'])? $_GET['type'] : null;
 
-    include_once "proveedor.php";
-    $proveedor = $_SESSION['proveedor'];
-    $proveedor = unserialize($proveedor);
-    $proveedor = $proveedor->getProveedor();
+    
     if($type!=null){
         if($type==1){
             // feriante

@@ -13,8 +13,8 @@
             // hacemos la comprobacion de licencias en este punto
             //Validacion de la licencia comercial (no puede repetirse)
             $licencias_cargadas = $base->query(
-            "SELECT licencia_comercial 
-            FROM comercio 
+            "SELECT licencia_comercial
+            FROM comercio
             WHERE licencia_comercial=$licencia")->fetchAll();
 
             if(count($licencias_cargadas)==0){
@@ -26,19 +26,18 @@
                                         $_POST['categ'],
                                         $_POST['website'],
                                         $_POST['mail'],
-                                        $_POST['telefono'],
                                         $_POST['delivery'],
                                         $_POST['descripcion']
                                     );
 
-                $_SESSION['comercio'] = serialize($comercio);
+                $_SESSION['comercio'] = serialize($comercio->getComercio());
                 header("location: ../form_ubicacion.php");
             }else{
                 //Existe una licencia previamente cargada(volvemos con ese parametro lc=licencia cargada)
                 header("Location: ?lc=1");
             }
         }
-    } 
+    }
 
     // vemos si la licencia retorna con problemas de registrar_comercio.php
     $lc = isset($_GET['lc'])? $_GET['lc'] : null;
@@ -57,16 +56,13 @@
 	<link rel="icon" href="../img/Logo.png" type="text/png"/>
     <link rel="stylesheet" href="../CSS/style_register.css">
     <link rel="stylesheet" href="css/style_registro_comercio.css">
-    
 <title>Registro proveedor</title>
-	
 
 </head>
 
 
 <body>
 	<main class="main">
-		
 		<div class="register_block">
         <form action="?next=1" method="post">
                 <div class="header">
@@ -92,8 +88,6 @@
                                 <option value="<?php echo($valor['id_categoria_comercio'])?>"> <?php echo($valor['nombre'])?> </option>
                             <?php endforeach; ?>
                         </select>
-                        
-                        
                     </div>
 
                     <div class="columna2">
@@ -104,10 +98,6 @@
                             <!-- mail -->
                             <label for="mail">E-mail</label>
                             <input type="mail" name="mail" id="mail" maxlength="50">
-                            <!-- tel -->
-                            <label for="telefono">Telefono</label>
-                            <input type="number" name="telefono" id="telefono" maxlength="20" required>
-
                         <!-- delivery -->
                         <div class="delivery">
                             <input type="checkbox" id="delivery" name="delivery" checked>
@@ -115,7 +105,6 @@
                         </div>
 
                     </div>
-                    
             <div class="bottom">
                     <!-- descripcion -->
                     <div class="text">
