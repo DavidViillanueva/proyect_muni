@@ -1,6 +1,7 @@
 <?php
     // Para validacion y verificacion de datos
     class verificacion{
+        // CUIL CUIT VILLANUEVA
         private function validacion($dni,$validador){
             // funcion para verificar el cuilt cuit, Villanueva
             $dni_array = array();
@@ -28,7 +29,7 @@
                 return false;
             }
         }
-
+        // CUILT CUIT VILLANUEVA
         public function verificacionCuilCuit($cuilt){
             $cuilt_array = array();
             $cuilt_array = str_split($cuilt);
@@ -46,6 +47,22 @@
             }else{
                 return false;
             }
+        }
+
+        // IMAGENES PERMITIDAS Y CANTIDADES VILLANUEVA
+        public function verificacionImagenes (&$arrayImagenes,$cantPermitida){
+            $permitidos = array("image/jpg", "image/jpeg", "image/png");
+            if(count($arrayImagenes["name"])>$cantPermitida)
+                return false;
+            $flag=0;
+            for($x=0;$x<count($arrayImagenes['type']);$x++){
+                if(!in_array($arrayImagenes['type'][$x],$permitidos))
+                    $flag++;
+            }
+            if($flag==0)
+                return true;
+            else
+                return false;
         }
     }
 ?>

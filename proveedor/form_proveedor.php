@@ -9,7 +9,6 @@
         session_start();
         include_once "../PHP/verificaciones.php";
         $verificacion = new verificacion();
-        $valor = $verificacion->verificacionCuilCuit($_POST['cuilt']);
         if($verificacion->verificacionCuilCuit($_POST['cuilt'])){
             // En este punto sabemos que el cuilt puede corresponder al dni ingresado
             // se graban el proveedor en la sesion

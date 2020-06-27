@@ -1,5 +1,4 @@
 <?php
-    include_once "../proveedor.php";
     include_once "conexion.php";
     // tomamos las variables del formulario de ubicacion
     $barrio = isset($_POST['barrio'])?$_POST['barrio'] : null;
@@ -23,7 +22,6 @@
     }else{
         $proveedor['plocal'] = 0;
     }
-
     if(preg_match("/on/",$comercio['delivery'])){
         $comercio['delivery'] = 1;
     }else{
@@ -33,7 +31,6 @@
     try{
         // la licencia ya fue validada igual que el cuit/cuil
         $base->beginTransaction();
-
         // cargamos al proveedor
         $dbq=$base->prepare("INSERT INTO proveedor(id_persona,Id_rubro,cuil_cuit,ventas_concretadas,suma_puntaje,status_proveedor,id_estado,productor_local)
             VALUES(:id_persona,:Id_rubro,:cuil_cuit,:ventas_concretadas,:suma_puntaje,:status_proveedor,:id_estado,:productor_local)");
@@ -79,7 +76,6 @@
             ":mail"=>strtoupper($comercio['mail']),
             ":descripcion"=>strtoupper($comercio['descripcion']),
         ));
-
         $base->commit();
         session_unset('comercio');
         session_unset('proveedor');

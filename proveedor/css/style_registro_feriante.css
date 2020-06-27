@@ -1,3 +1,6 @@
+.register_block input[type="file"]{
+    margin-top: 10px;
+}
 @media (max-width:750px){
     .register_block{
         height: 100%;
