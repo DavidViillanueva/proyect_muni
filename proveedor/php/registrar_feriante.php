@@ -71,6 +71,9 @@
         }
         echo("bien");
         $base->commit();
+        session_unset('proveedor');
+        session_unset('descripcion');
+        session_unset('nombre');
     }catch(PDOException $ex){
         $base->rollback();
         echo("mal");

@@ -1,0 +1,83 @@
+.footer{
+    background:#f2f2f2;
+    color:black;
+    height: 300px;
+	text-align: center;
+	bottom: 0;
+	flex:1;
+}
+
+.footer .content{
+    background:#f2f2f2;
+    height: 270px;
+    display: flex;
+}
+
+.footer .content .logo{
+	background:#f2f2f2;
+    margin-left: 50px;
+    margin-top: 20px;
+    flex: 1;
+}
+
+.footer .content .links{
+	background:#f2f2f2;
+    margin-left: 50px;
+    margin-top: 20px;
+    flex: 1;
+}
+.footer .content .contact{
+	background:#f2f2f2;
+    margin-left: 50px;
+    margin-top: 20px;
+    flex: 1;
+}
+
+
+
+.footer .content .contact h1 span{
+    color: black;
+}
+
+.footer .content .contact span{
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+
+
+.footer .content .links ul li{
+    display: block;
+    margin-bottom:20px;
+    font-size: 1.2em;
+    text-decoration: none;
+
+}
+
+@media only screen and (max-width: 767px){
+	/* -----------------------footer--------------------- */
+	.footer{
+		text-align: left;
+	}
+	.footer .content{
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.footer .content .logo{
+		margin-left: 0px;
+		text-align: center;
+	}
+
+	.footer .content .links{
+		margin-left: 0px;
+		text-align: center;
+	}
+
+	.footer .content .contact{
+		margin-left: 0px;
+		margin-top: 0px;
+		text-align: center;
+	}
+}
