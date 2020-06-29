@@ -1,11 +1,17 @@
-.register_block .content .produlocal{
+.register_block .content .plocal{
     display: flex;
 }
 
 .register_block .content .columna2{
     text-align: center;
 }
-
+.register_block select{
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 25px;
+}
 @media (max-width:450px){
     .register_block{
         height: 100%;

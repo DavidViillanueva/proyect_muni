@@ -1,6 +1,25 @@
 <?php
-    // $id_user = $_GET['id'];
-    $id_user=2;
+    // levantamos la sesion para tener los datos de el formulario proveedor
+    session_start();
+    $type = isset($_GET['type'])? $_GET['type'] : null;
+
+    
+    if($type!=null){
+        if($type==1){
+            // feriante
+            echo("feriante");
+            header("location: form_feriante.php");
+        }elseif($type==2){
+            //servicio
+            echo("servicio");
+            header("location: form_servicio.php");
+        }elseif($type==3){
+            //comercio
+            echo("comerico");
+            header("location: form_comercio.php");
+        }
+    }
+
 ?>
 
 <!doctype html>
@@ -26,7 +45,7 @@
                     <h1>¿Que tipo de proveedor sos?</h1>
                 </div>
                 <div class="content">
-                    <a href="form_feriante.php?id=<?php echo($id_user)?>">
+                    <a href="?type=1">
                         <div class="type1" title="Comercias cosas hechas con tus propias manos! No contas con habilitacion ni local fisico.">
                                 <span class="fas fa-store icon"></span>
                                 <h3>Feriante</h3>
@@ -34,7 +53,7 @@
                         </div>
                     </a>
 
-                    <a href="form_servicio.php?id=<?php echo($id_user)?>">
+                    <a href="?type=2">
                         <div class="type2" title="Ofreces un servicio en el domicilio de tus clientes. Ej: Electricista.">
                                 <span class="fas fa-tools"></span>
                                 <h3>Servicio</h3>
@@ -42,7 +61,7 @@
                         </div>
                     </a>
 
-                    <a href="form_comercio.php?id=<?php echo($id_user)?>">
+                    <a href="?type=3">
                         <div class="type3" title="Tenes un comercio con habilitacion comercial, local y nombre registrado.">
                                 <span class="fas fa-cash-register"></span>
                                 <h3>Comercio</h3>
