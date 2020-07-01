@@ -18,9 +18,9 @@
         $dbq=$base->prepare("INSERT INTO proveedor(id_persona,Id_rubro,cuil_cuit,ventas_concretadas,suma_puntaje,status_proveedor,id_estado,productor_local)
             VALUES(:id_persona,:Id_rubro,:cuil_cuit,:ventas_concretadas,:suma_puntaje,:status_proveedor,:id_estado,:productor_local)");
         $dbq->execute(array(
-            ":id_persona"=>(int)$proveedor['id_usuario'],
-            ":Id_rubro"=>(int)$proveedor['rubro'],
-            ":cuil_cuit"=>(int)$proveedor['cuilt'],
+            ":id_persona"=>$proveedor['id_usuario'],
+            ":Id_rubro"=>$proveedor['rubro'],
+            ":cuil_cuit"=>$proveedor['cuilt'],
             // ventas concretadas hardcodeado a 0 al igual que suma puntaje
             ":ventas_concretadas"=>0,
             ":suma_puntaje"=>0,
@@ -69,7 +69,6 @@
                 ":tipo_imagen"=>$imagenes[$i]['type']
             ));
         }
-        echo("bien");
         $base->commit();
         session_unset('proveedor');
         session_unset('descripcion');

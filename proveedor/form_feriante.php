@@ -18,7 +18,7 @@
             echo("incorrecto");
             header ("location: ?nf=1");
         }
-}
+    }
 
     $nf = isset($_GET['nf'])?$_GET['nf']: null;
 ?>
@@ -30,10 +30,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="../img/Logo.png" type="text/png"/>
     <link rel="stylesheet" href="../CSS/style_register.css">
-    
     <link rel="stylesheet" href="css/style_registro_feriante.css">
     <link rel="stylesheet" href="css/style_registro_comercio.css">
-    <link rel="stylesheet" href="css/style_registro_feriante.css">
 <title>Registro proveedor</title>
 
 </head>

@@ -51,18 +51,30 @@
 
         // IMAGENES PERMITIDAS Y CANTIDADES VILLANUEVA
         public function verificacionImagenes (&$arrayImagenes,$cantPermitida){
-            $permitidos = array("image/jpg", "image/jpeg", "image/png");
+            // en caso de que el tamaño en el indice 0 sea igual a 0 quiere decir que el
+            // arreglo este vacio, se genera igual
+            if($arrayImagenes['size'][0]==0){
+                return true;
+            }
             if(count($arrayImagenes["name"])>$cantPermitida)
                 return false;
             $flag=0;
+            $validador = new verificacion();
             for($x=0;$x<count($arrayImagenes['type']);$x++){
-                if(!in_array($arrayImagenes['type'][$x],$permitidos))
+                if(!$validador->verificacionFormatoImagen($arrayImagenes['type'][$x]))
                     $flag++;
             }
             if($flag==0)
                 return true;
             else
                 return false;
+        }
+
+        public function verificacionFormatoImagen($imagen){
+            $permitidos = array("image/jpg", "image/jpeg", "image/png");
+            if(!in_array($imagen,$permitidos))
+                return false;
+            return true;
         }
     }
 ?>
