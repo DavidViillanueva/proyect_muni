@@ -5,68 +5,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- hojas de estilo -->
 	<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
-<<<<<<< HEAD
 	<link rel="icon" href="img/Logo.png">
 
-=======
-
-	<link rel="icon" href="img/Logo.png" type="img/text/png"/>
-
-	<link rel="stylesheet" type="text/css" href="CSS/estilos_popup.css">
-
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-
-	<link rel="stylesheet" type="text/css" href="CSS/contenedor2.css">
-	
->>>>>>> mohito2
 <title>Compra venta Zapala</title>
 </head>
 
-<<<<<<< HEAD
 <body>
 	<?php include_once('header.php'); ?>
-=======
-<body background="img/fondoazul2.png">	
-	<header class="header">
-		
-		 <div class="contenedor logo_nav_contenedor">
-			 <a title="zappag" href="https://www.zapala.gob.ar"><div class="logo"></div></a>
-			 <div class="menu-icon"></div>
-			<nav class="navegador">
-				<ul>
-					<li><a href="Indexs.php">Inicio</a></li>
-					<li><a href="#">Galeria</a></li>
-					<li><a href="#">Comercios</a></li>
-					<li><a id="btn-abrir-popup" class="btn-abrir-popup" href="#">login</a></li>
-					<li><a href=" ../registrarse.php ">Registrate</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
->>>>>>> mohito2
 	<span class="linea"></span>
 	<main class="main" style="text-align: justify">
 		<div class="contenedor">
-<<<<<<< HEAD
-		   <h1>SITIO BAJO CONSTRUCCION</h1>
-		   	<p>
-				Está dirigido a todos los Proveedores (Comerciantes, Productores Locales, Feriantes y
-				Ofrecedores de Servicios Independientes), como así también a Consumidores de Servicios de la
-				ciudad a formalizarse en el uso de una nueva tecnología ofrecida por la Municipalidad de Zapala.
-			</p>
-			<p>
-				es una iniciativa de la Municipalidad de Zapala en conjunto con
-				Profesores y Alumnos de la Universidad Tecnológica Nacional, Regional Neuquén, con el
-				objetivo de desarrollar un Sitio de Ventas Online que formalice la comercialización de productos
-				y servicios como así también a sus oferentes.
-			</p>
-			<p>
-				Podrás publicar tus servicios y/o productos para ser adquiridos por
-				los ciudadanos de Zapala, los cuales elegirán como pagarlos y su forma de entrega, de acuerdo a
-				lo que ofrezcas, asegurando así una forma rápida y segura de comerciar.
-			</p>
-		</di>
-=======
 			<img class="quedatecasa" src="img/quedateencasa.jpg" alt="">
 			<h1 color="#ooo" align="center">Sitio Bajo Construcción.</h1>
 			<h2 align="center">Bienvenidos a ZapalaComercial.com.ar</h2>
@@ -126,7 +74,6 @@
 			   personas para las entregas.
 			</p>
 		</div>
->>>>>>> mohito2
 	</main>
 
 	<?php include_once('footer.php'); ?>
