@@ -20,8 +20,7 @@
             if(count($licencias_cargadas)==0){
                 // en este punto se hizo click en el "boton" next
                 include_once "proveedor.php";
-                $comercio = new comercio();
-                $comercio->setComercio( $_POST['nombre'],
+                $comercio = new comercio($_POST['nombre'],
                                         $_POST['licencia'],
                                         $_POST['categ'],
                                         $_POST['website'],

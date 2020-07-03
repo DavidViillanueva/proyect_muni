@@ -1,25 +1,4 @@
 <?php
-    // verificacion de cantidad de archivos, y tipos soportados en parte del servidor
-    include_once "../PHP/verificaciones.php";
-    $verificacion = new verificacion();
-    // tener en cuenta que se puede tomar la cantidad maxima desde una consulta
-    $submit = isset($_POST['submit'])?$_POST['submit'] : null;
-    if($submit!=null){
-        if($verificacion->verificacionImagenes($_FILES['images'],5)){
-            // si los archivos cumplen con los requerimientos
-            echo("correcto");
-            session_start();
-            $_SESSION['nombre'] = $_POST['nombre'];
-            $_SESSION['descripcion'] = $_POST['descripcion'];
-            $_SESSION['images'] = $_FILES['images'];
-            header("location: php/registrar_feriante.php");
-        }else{
-            // caso contrario
-            echo("incorrecto");
-            header ("location: ?nf=1");
-        }
-    }
-
     $nf = isset($_GET['nf'])?$_GET['nf']: null;
 ?>
 
@@ -40,7 +19,7 @@
 <body>
 	<main class="main">
 		<div class="register_block">
-        <form action="#" method="post" enctype="multipart/form-data">
+        <form action="php/registrar_feriante.php" method="post" enctype="multipart/form-data">
                 <div class="header">
                     <h1>Registrate como feriante</h1>
                 </div>
