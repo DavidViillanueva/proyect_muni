@@ -3,8 +3,12 @@
 <head>
 <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<link rel="icon" href="img2/Logo.png" type="text/png"/>
+	<link rel="stylesheet" type="text/css" href="css/estilos_popup.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/comercio.css">
+	<link rel="icon" href="img/Logo.png" type="text/png"/>
 <title>Comercios</title>
 	<script
 	  src="https://code.jquery.com/jquery-3.5.0.js"
@@ -14,7 +18,7 @@
 </head>
 
 
-<body>
+<body background="img/fondoazul2.png">
 	
 	<header class="header">
 		
@@ -24,7 +28,7 @@
 			<nav class="navegador">
 				<ul>
 					<li><a href="Indexs.php">Inicio</a></li>
-					<li><a href="../HTML/galeria.html">Galeria</a></li>
+					<li><a href="html/galeria.html">Galeria</a></li>
 					<li><a href="comercios.php">Comercios</a></li>
 					<li><a href="login.php">Login</a></li>
 					<li><a href="registrarse.php">Registrate</a></li>
@@ -32,33 +36,54 @@
 			</nav>
 		</div>
 	</header>
-	<main class="main content-select">
+	<main class="main">
 		
-		<div class="buscador">
-		<label>Buscar por:</label>
-			<select id="lista1" name="lista1">
+		<div class="buscador content-select">
+		<label>Filtrar por: <br></label>
+		<label for="">Categoria:</label>
+			<select id="categoria" name="categoria">
 				<option value="0">Selecciona una opcion</option>
 				<option value="1">America</option>
 				<option value="2">Asia</option>
 				<option value="3">Europa</option>
 				<option value="4">Africa</option>			
 			</select>
+			<label for="">Barrio:</label>
+			<select name="barrio" id="barrio"></select>
 			
-			<div id="select2lista"></div>
-			
-				<input type="submit" value="Buscar">
+			<input type="submit" value="Buscar">
 		</div>
-		<table>
-			<tr>
-				<th>Comercio</th>
-				<th>Rubro</th>
-				<th>Barrio</th>
-				<th>Horarios</th>
-				<th>Telefono</th>
-				<th>Mail</th>
-				<th>Mercado Pago</th>
-        	</tr>
-		</table>
+		<div class="comercio">
+				<ul>
+					<li>
+						<img src="img/ubicacion.jpg" alt="">
+						<p>Nombre:</p>
+						<p>Direccion:</p>
+						<p>Telefono:</p>
+						<p>Delivery:</p>
+						<input type="submit" value="ir al comercio">
+					</li>
+					<li>
+						<img src="img/imagen1.jpg" alt="">
+						<p>
+						   Publicidad para potenciar tu negocio obteniendo mayor visibilidad comercial 
+						   TOTALMENTE GRATIS.
+						</p>
+					</li>
+					<li>
+						<img src="img/imagen2.png" alt="">
+						<p>
+							Esto te permitirá mejorar la relacion con tus viejos clientes y atraer a nuevos.
+						</p>
+					</li>
+					<li>
+						<img src="img/imagen2.png" alt="">
+						<p>
+							Esto te permitirá mejorar la relacion con tus viejos clientes y atraer a nuevos.
+						</p>
+					</li>
+				</ul>
+			</div>
 	</main>
 </body>
 </html>
