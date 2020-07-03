@@ -1,9 +1,9 @@
 <?php
     include_once('conexion.php');
     include_once('../../PHP/verificaciones.php');
+    include_once('../proveedor.php');
     session_start();
     // verificacion de cantidad de archivos, y tipos soportados en parte del servidor
-    $verificacion = new verificacion();
     // tener en cuenta que se puede tomar la cantidad maxima desde una consulta
     $submit = isset($_POST['submit'])?$_POST['submit'] : null;
     // creamos variable de bandera para evitar que se carguen mal las imagenes (si llega != de 0, esta mal algo)
@@ -12,14 +12,14 @@
     $parametros = "?";
     if($submit!=null){
         // verificacion de fotos (cantidad y formatos)
-        if(!$verificacion->verificacionImagenes($_FILES['fotos'],5)){
+        if(!verificacionImagenes($_FILES['fotos'],5)){
             $flag++;
             $parametros = $parametros."nf=1";
         }
         // verificamos que exista un logo
         if($_FILES['logo']['size']!=0){
             // verificamos su formato
-            if(!$verificacion->verificacionFormatoImagen($_FILES['logo']['type'])){
+            if(!verificacionFormatoImagen($_FILES['logo']['type'])){
                 $flag++;
                 $parametros = $parametros."&nl=1";
             }else{
@@ -68,75 +68,20 @@
             }
 
             $proveedor = unserialize($_SESSION['proveedor']);
-            // los campos checkbox vienen con on, hay que pasarlo a 1 o 0 segn corresponda por tipo de dato en bd
-            if(preg_match("/on/",$proveedor['plocal'])){
-                $proveedor['plocal'] = 1;
-            }else{
-                $proveedor['plocal'] = 0;
-            }
-
             try{
                 $base->beginTransaction();
                 // cargamos al proveedor
-                $dbq=$base->prepare("INSERT INTO proveedor(id_persona,Id_rubro,cuil_cuit,ventas_concretadas,suma_puntaje,status_proveedor,id_estado,productor_local)
-                    VALUES(:id_persona,:Id_rubro,:cuil_cuit,:ventas_concretadas,:suma_puntaje,:status_proveedor,:id_estado,:productor_local)");
-                $dbq->execute(array(
-                    ":id_persona"=>$proveedor['id_usuario'],
-                    ":Id_rubro"=>$proveedor['rubro'],
-                    ":cuil_cuit"=>$proveedor['cuilt'],
-                    // ventas concretadas hardcodeado a 0 al igual que suma puntaje
-                    ":ventas_concretadas"=>0,
-                    ":suma_puntaje"=>0,
-                    // hardcodeado a 2 que indica status regular
-                    ":status_proveedor"=>2,
-                    //estado hardcodeado a 4 que es "En espera"
-                    ":id_estado"=>4,
-                    ":productor_local"=>$proveedor['plocal']
-                ));
-                // obtenemos el id del proveedor cargado
-                $id_proveedor = $base->lastInsertId();
+                $prov = new proveedor($proveedor['cuilt'],$proveedor['rubro'],$proveedor['plocal'],$proveedor['id_usuario']);
+                $id_proveedor = $prov->uploadProveedor($base);
                 // cargamos el servicio
-                $dbq = $base->prepare("INSERT INTO servicio (id_proveedor,id_categoria_servicio,matricula,nombre_fantacia,imagen,tipo_imagen)
-                    VALUES (:id_proveedor,:id_categoria_servicio,:matricula,:nombre_fantacia,:imagen,:tipo_imagen)");
-                $dbq->execute(array(
-                    ":id_proveedor"=>$id_proveedor,
-                    ":id_categoria_servicio"=>$categoria_servicio,
-                    ":matricula"=>$matricula,
-                    ":nombre_fantacia"=>$nombre,
-                    ":imagen"=>$logo_bin,
-                    ":tipo_imagen"=>$tipo_logo
-                ));
-                $id_servicio = $base->lastInsertId();
+                $serv = new servicio($nombre,$matricula,$categoria_servicio,$descripcion,$logo_bin,$tipo_logo);
+                $id_servicio = $serv->uploadServicio($base,$id_proveedor);
                 // cargamos las fotos (en caso de que existan)
                 if($fotos!=null){
-                    $files_post = $fotos; //vienen las imagenes todos los nombres en 0, todos los tipos en 1 etc
-                    $imagenes= array(); //un array para separar los datos de las imagenes por un indice a cada una
-                    $files_count = count($files_post['name']);
-                    $file_key = array_keys($files_post); //devuelve las claves de cada valor del array
-                    for($i=0;$i<$files_count;$i++){
-                        foreach($file_key as $key){
-                            $imagenes[$i][$key] = $files_post[$key][$i];
-                        }
-                    }
-                    // en este punto recien tenemos las x imagenes ordenadas en $imagenes
-                    $data = array();
-                    for($i=0;$i<$files_count;$i++){
-                        $fp = fopen($imagenes[$i]['tmp_name'],'r');
-                        $data[$i] = fread($fp,$imagenes[$i]['size']);
-                        //en data[] quedan los binarios de cada archivo subido
-                        fclose($fp);
-                    }
-                    for($i=0;$i<$files_count;$i++){
-                        $dbq = $base->prepare("INSERT INTO imagenes_servicio(id_servicio,imagen,tipo_imagen)
-                                VALUES(:id_feriante,:imagen,:tipo_imagen)");
-                        $dbq->execute(array(
-                            ":id_feriante"=>$id_servicio,
-                            ":imagen"=>$data[$i],
-                            ":tipo_imagen"=>$imagenes[$i]['type']
-                        ));
-                    }
+                    uploadImages($fotos,$id_servicio,$base,"imagenes_servicio","id_servicio");
                 }
                 $base->commit();
+                header('location: listo.php');
                 echo("bien");
             }catch(PDOException $ex){
                 echo('mal');

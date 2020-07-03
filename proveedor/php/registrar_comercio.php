@@ -1,5 +1,7 @@
 <?php
-    include_once "conexion.php";
+    include_once 'conexion.php';
+    include_once '../proveedor.php';
+    include_once '../../PHP/uploads.php';
     // tomamos las variables del formulario de ubicacion
     $barrio = isset($_POST['barrio'])?$_POST['barrio'] : null;
     $calle = isset($_POST['calle'])?$_POST['calle'] : null;
@@ -16,12 +18,6 @@
     $proveedor = unserialize($_SESSION['proveedor']);
 
     $comercio = unserialize($_SESSION['comercio']);
-    // los campos checkbox vienen con on, hay que pasarlo a 1 o 0 segn corresponda por tipo de dato en bd
-    if(preg_match("/on/",$proveedor['plocal'])){
-        $proveedor['plocal'] = 1;
-    }else{
-        $proveedor['plocal'] = 0;
-    }
     if(preg_match("/on/",$comercio['delivery'])){
         $comercio['delivery'] = 1;
     }else{
@@ -32,53 +28,43 @@
         // la licencia ya fue validada igual que el cuit/cuil
         $base->beginTransaction();
         // cargamos al proveedor
-        $dbq=$base->prepare("INSERT INTO proveedor(id_persona,Id_rubro,cuil_cuit,ventas_concretadas,suma_puntaje,status_proveedor,id_estado,productor_local)
-            VALUES(:id_persona,:Id_rubro,:cuil_cuit,:ventas_concretadas,:suma_puntaje,:status_proveedor,:id_estado,:productor_local)");
-        $dbq->execute(array(
-            ":id_persona"=>(int)$proveedor['id_usuario'],
-            ":Id_rubro"=>(int)$proveedor['rubro'],
-            ":cuil_cuit"=>(int)$proveedor['cuilt'],
-            // ventas concretadas hardcodeado a 0 al igual que suma puntaje
-            ":ventas_concretadas"=>0,
-            ":suma_puntaje"=>0,
-            // hardcodeado a 2 que indica status regular
-            ":status_proveedor"=>2,
-            //estado hardcodeado a 4 que es "En espera"
-            ":id_estado"=>4,
-            ":productor_local"=>$proveedor['plocal']
-        ));
-        // obtenemos el id del proveedor cargado
-        $id_proveedor = $base->lastInsertId();
+        $prov = new proveedor($proveedor['cuilt'],$proveedor['rubro'],$proveedor['plocal'],$proveedor['id_usuario']);
+        $id_proveedor = $prov->uploadProveedor($base);
         // cargamos la direccion del comercio
-        $dbq = $base->prepare("INSERT INTO domicilio(id_localidad,barrio,calle,altura,piso,departamento)
-            VALUES(:id_localidad,:barrio,:calle,:altura,:piso,:departamento)");
-        $dbq->execute(array(
-            ":id_localidad"=>(int)$id_localidad,
-            ":barrio"=>strtoupper($barrio),
-            ":calle"=>strtoupper($calle),
-            ":altura"=>(int)$altura,
-            ":piso"=>(int)$piso,
-            ":departamento"=>strtoupper($departamento)
-        ));
-        // obtenemos el id del domicilio cargado
-        $id_domicilio = $base->lastInsertId();
+        $id_domicilio = uploadAdress($base,$id_localidad,$barrio,$calle,$altura,$piso,$departamento);
+        var_dump($id_domicilio);
+        // $dbq = $base->prepare("INSERT INTO domicilio(id_localidad,barrio,calle,altura,piso,departamento)
+        //     VALUES(:id_localidad,:barrio,:calle,:altura,:piso,:departamento)");
+        // $dbq->execute(array(
+        //     ":id_localidad"=>(int)$id_localidad,
+        //     ":barrio"=>strtoupper($barrio),
+        //     ":calle"=>strtoupper($calle),
+        //     ":altura"=>(int)$altura,
+        //     ":piso"=>(int)$piso,
+        //     ":departamento"=>strtoupper($departamento)
+        // ));
+        // // obtenemos el id del domicilio cargado
+        // $id_domicilio = $base->lastInsertId();
         // cargamos al comercio
-        $dbq = $base->prepare("INSERT INTO comercio(id_proveedor,id_domicilio,id_categoria,nombre_comercio,delivery,licencia_comercial,pagina_web,mail,descripcion)
-            VALUES(:id_proveedor,:id_domicilio,:id_categoria,:nombre_comercio,:delivery,:licencia_comercial,:pagina_web,:mail,:descripcion)");
-        $dbq->execute(array(
-            ":id_proveedor"=>(int)$id_proveedor,
-            ":id_domicilio"=>(int)$id_domicilio,
-            ":id_categoria"=>(int)$comercio['categoria'],
-            ":nombre_comercio"=>strtoupper($comercio['nombre']),
-            ":delivery"=>(int)$comercio['delivery'],
-            ":licencia_comercial"=>(int)$comercio['licencia'],
-            ":pagina_web"=>strtoupper($comercio['website']),
-            ":mail"=>strtoupper($comercio['mail']),
-            ":descripcion"=>strtoupper($comercio['descripcion']),
-        ));
+        $comer = new comercio($comercio['nombre'],$comercio['licencia'],$comercio['categoria'],$comercio['website'],$comercio['mail'],$comercio['delivery'],$comercio['descripcion']);
+        var_dump($comer->uploadComercio($base,$id_proveedor,$id_domicilio));
+        // $dbq = $base->prepare("INSERT INTO comercio(id_proveedor,id_domicilio,id_categoria,nombre_comercio,delivery,licencia_comercial,pagina_web,mail,descripcion)
+        //     VALUES(:id_proveedor,:id_domicilio,:id_categoria,:nombre_comercio,:delivery,:licencia_comercial,:pagina_web,:mail,:descripcion)");
+        // $dbq->execute(array(
+        //     ":id_proveedor"=>(int)$id_proveedor,
+        //     ":id_domicilio"=>(int)$id_domicilio,
+        //     ":id_categoria"=>(int)$comercio['categoria'],
+        //     ":nombre_comercio"=>strtoupper($comercio['nombre']),
+        //     ":delivery"=>(int)$comercio['delivery'],
+        //     ":licencia_comercial"=>(int)$comercio['licencia'],
+        //     ":pagina_web"=>strtoupper($comercio['website']),
+        //     ":mail"=>strtoupper($comercio['mail']),
+        //     ":descripcion"=>strtoupper($comercio['descripcion']),
+        // ));
         $base->commit();
         session_unset('comercio');
         session_unset('proveedor');
+        header('location: listo.php');
     }catch(PDOException $ex){
         $base->rollback();
         echo($ex->getMessage());
