@@ -1,0 +1,180 @@
+.profile{
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    height: auto;
+    text-align: center;
+}
+.cuerpo{
+    position: relative;
+    float: left;
+    background-color: #f2f2f2;
+    padding: 10px;
+    width: 75%;
+    border-radius: 5px;
+}
+.cuerpo .user{
+    text-align: center;
+}
+.icon-shop{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin-top: -50px;
+}
+.socials{
+    display: flex;
+    flex-wrap: wrap;
+}
+.socials .face{
+    text-align: center;
+    flex:1;
+    padding-bottom: 40px;
+}
+.socials .mail{
+    text-align:center;
+    flex:1;
+    padding-bottom: 40px;
+}
+.socials .cel{
+    text-align: center;
+    flex:1;
+    padding-bottom: 40px;
+}
+.socials a{
+    text-decoration: none;
+
+}
+.socials .icon{
+    font-size: 35px;
+    color: #707070;
+}
+
+
+
+.wrap{
+	margin: 30px auto;
+}
+
+ul.tabs{
+    border-radius: 9px;
+	background: #363636;
+	list-style: none;
+    display: flex;
+    padding: 0px;
+}
+
+ul.tabs li{
+	width: 18%;
+}
+
+ul.tabs li a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	text-align: center;
+
+	display: block;
+	padding: 20px 0px;
+}
+
+.Tabactive{
+    background: #BAD91B;
+    border-radius: 9px;
+}
+
+ul.tabs li a .tab-text{
+	margin-left: 8px;
+}
+
+.secciones{
+    width: 100%;
+}
+
+.secciones article{
+	padding: 30px;
+}
+
+
+aside{
+    background-color: #f2f2f2;
+    float: right;
+    margin-right: 20px;
+    width: 20%;
+    border-radius: 5px;
+}
+aside nav{
+    text-align: left;
+}
+aside nav ul{
+    list-style: none;
+    padding: 5px;
+}
+aside nav ul li:hover{
+    background-color: #a8a8a8;
+    cursor: pointer;
+}
+aside nav ul li{
+    
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+aside nav ul li a{
+    text-decoration: none;
+    padding-left: 15px;
+    color: #3d3d3d;
+}
+
+@media screen and (max-width: 700px){
+    .profile{
+        display: inline-flex;
+    }
+    .cuerpo{
+        width: 100%;
+
+    }
+	ul.tabs li{
+		width: none;
+		flex-basis: 0;
+		flex-grow: 1;
+	}
+}
+
+@media screen and (max-width: 450px){
+    body{
+        width: unset;
+    }
+    .cuerpo{
+        width: 99%;
+    }
+	ul.tabs li a{
+		padding: 15px 0px;
+	}
+
+	ul.tabs li a .tab-text{
+		display: none;
+	}
+
+	.secciones article{
+		padding: 20px;
+    }
+    
+    .socials .face{
+        text-align: left;
+    }
+    .socials .mail{
+        text-align: left;
+    }
+
+    .socials .cel{
+        text-align: left;
+    }
+
+    aside{
+        margin-top: 20px;
+        width: 100%;
+        margin-right: 0px;
+    }
+    
+}

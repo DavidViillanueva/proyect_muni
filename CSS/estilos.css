@@ -3,14 +3,17 @@
 body{
 	background-attachment: fixed;
 	color: #222222;
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1.2rem;
 	line-height: 1.1em;
 	margin: 0;
 	background-color: #E4E5DF;
 	background-position: center;
+	font-family: 'Ubuntu', sans-serif;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+
 	width: 100%;
-	
 }
 
 
@@ -31,75 +34,12 @@ h3{
 	color: rgb(0, 0, 0);
 }
 
-.contenedor{
-	width: 85%;
-	max-width: 850px;
-	margin: 0 auto;
-}
-.header{
-	background: #BAD91B;
-	color: #323131;
-	padding: 0.4rem 0;
-	max-height: 100px;
-	position: fixed;
-	left: 0;
-	top: 0;
-	right: 0;
-}
-.header a{
-	color: #323131;
-	text-decoration: none;
-}
-
-.logo_nav_contenedor{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-}
-.contenedor .logo{
-	background: url(../img/logozapala.png) top left no-repeat;
-	width: 260px;
-	height: 120px;
-}
-.menu-icon{
-	display: none;
-	background: url(../img/menu-icon.png)center  no-repeat;
-	width: 70px;
-	height: 50px;
-	margin-top: 30px;
-}
 
 
-
-.navegador ul{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.navegador ul li{
-	display: inline-block;
-}
-
-.navegador ul li a{
-	display: block;
-	padding: 0.6rem 1rem;
-	transition: all 0.4s linear;
-	border-radius: 5px;
-}
-
-.navegador ul li a:hover{
-	background: #85929E;
-}
-
-.logo{
-	letter-spacing: 15px;
-	font-size: 1.3em;
-}
-
-.main{
-	padding-top: 9rem;
+main{
+	flex: 1;
+	padding-top: 60px;
+	padding-bottom: 30px;
 }
 
 /*select de la pagina de comercios.php*/
@@ -147,159 +87,6 @@ h3{
 	background: #B1E8CD;
 }
 /*hasta aca el css del select*/
-
-/*------------------------ footer ----------------------------------*/
-
-.footer{
-    background:#f2f2f2;
-    color:black;
-    height: 300px;
-	position: relative;
-	text-align: center;
-}
-
-
-
-.footer .content{
-	
-    background:#f2f2f2;
-    height: 270px;
-    display: flex;
-}
-
-.footer .content .logo{
-	background:#f2f2f2;
-    margin-left: 50px;
-    margin-top: 20px;
-    flex: 1;
-}
-
-.footer .content .links{
-	background:#f2f2f2;
-    margin-left: 50px;
-    margin-top: 20px;
-    flex: 1;
-}
-.footer .content .contact{
-	background:#f2f2f2;
-    margin-left: 50px;
-    margin-top: 20px;
-    flex: 1;
-}
-
-
-
-.footer .content .contact h1 span{
-    color: black;
-}
-
-.footer .content .contact span{
-    display: block;
-    font-size: 1.1em;
-    margin-bottom: 8px;
-}
-
-
-
-.footer .content .links ul li{
-    display: block;
-    margin-bottom:20px;
-    font-size: 1.2em;
-    text-decoration: none;
-
-}
-
-@media only screen and (max-width: 767px){
-	.header{
-		background: #BAD91B;
-		color: #323131;
-		max-height: 120px;
-		width: 100%;
-		position: relative;
-
-	}
-	.menu-icon{
-		display: block;
-		cursor: pointer;
-		padding: 0.6rem 0rem;
-		align-items: flex-end;
-		position: relative;
-	}
-	.menu-icon:hover + .navegador ul{
-		visibility: visible;
-	}
-	.navegador ul:hover{
-		visibility: visible;
-	}
-	.navegador{
-		width: 100%;
-		margin-top: 1rem;
-	}
-	
-	.navegador ul{
-		visibility: hidden;
-		text-align: right;
-	}
-	
-	.navegador ul.show{
-		display: block;
-	}
-	
-    .navegador ul li{
-		display: block;
-    }
-
-	.navegador ul li a{
-		display: block;
-		padding: 0.6rem 0rem;
-		transition: all 0.4s linear;
-		border-radius: 5px;
-		color: #212121;
-	}
-
-	.navegador ul li a:hover{
-		background: #D0D3D4;
-	}
-	
-	/* ---------------logo--------------- */
-	.contenedor .logo{
-		margin-top: 30px;
-		background: url(../img/Logo.png) top left no-repeat;
-		width: 70px;
-		height: 70px;
-	}
-
-
-	/* -----------------------footer--------------------- */
-	.footer{
-		text-align: left;
-	}
-	.footer .content{
-		flex-direction: column;
-		text-align: center;
-	}
-
-	.footer .content .logo{
-		margin-left: 0px;
-		text-align: center;
-	}
-
-	.footer .content .links{
-		margin-left: 0px;
-		text-align: center;
-	}
-
-	.footer .content .contact{
-		margin-left: 0px;
-		margin-top: 0px;
-		text-align: center;
-	}
-}
-
-
-
-
-
 
 /* ----------------- adicionales comercios.php-------------------- */
 
