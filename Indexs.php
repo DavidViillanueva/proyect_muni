@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- hojas de estilo -->
 	<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+<<<<<<< HEAD
 	<link rel="icon" href="img/Logo.png">
 
 <title>Compra venta Zapala</title>
@@ -19,6 +20,38 @@
 			<h1 color="#ooo" align="center">Sitio Bajo Construcción.</h1>
 			<h2 align="center">Bienvenidos a ZapalaComercial.com.ar</h2>
 			<h3 align="left">A quién va dirigido...</h3>
+=======
+
+	<link rel="icon" href="img/Logo.png" type="img/text/png"/>
+
+	<link rel="stylesheet" type="text/css" href="CSS/estilos_popup.css">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+	<link rel="stylesheet" type="text/css" href="CSS/contenedor2.css">
+	
+	<link rel="icon" href="img/Logo.png">
+
+
+<title>Compra venta Zapala</title>
+</head>
+
+
+<body>	
+	
+	<?php include_once('header.php'); ?>
+
+	<span class="linea"></span>
+	<main class="main" style="text-align: justify">
+		<div class="contenedor">
+		
+			<div>
+				<img class="quedatecasa" src="img/quedateencasa.jpg" alt="">
+			</div>
+			<h1 class="h1">Sitio Bajo Construcción.</h1>
+			<h2 class="h2">Bienvenidos a ZapalaComercial.com.ar donde todos podemos ser parte.</h2>
+			<h3 class="h3">A quién va dirigido...</h3>
+>>>>>>> mohito2
 		
 			<p>Está dirigido a todos los Proveedores (Comerciantes, Productores Locales, Feriantes y Ofrecedores de 
 			   Servicios Independientes), como así también a Consumidores de Servicios de la ciudad a formalizarse en
@@ -26,19 +59,19 @@
 			</p>
 			
 			
-			<h3 align="left">De qué se trata...</h3>
+			<h3 class="h3">De qué se trata...</h3>
 			<p> ZapalaComercial.com.ar es una iniciativa de la Municipalidad de Zapala en conjunto con Profesores 
 				y Alumnos de la Universidad Tecnológica Nacional, Regional Neuquén, con el objetivo de 
 				desarrollar un Sitio de Ventas Online que formalice la comercialización de productos y servicios 
 				como así también a sus oferentes. 
 			</p>
 			
-			<h3 align="left">Cómo funciona... </h3>
+			<h3 class="h3">Cómo funciona... </h3>
 			<p>En el ZapalaComercial.com.ar podrás publicar tus servicios y/o productos para ser adquiridos por 
 			   los ciudadanos de Zapala, los cuales elegirán como pagarlos y su forma de entrega, de acuerdo 
 			   a lo que ofrezcas, asegurando así una forma rápida y segura de comerciar.
 			</p>
-			<h3>Beneficios de sumarte como Proveedor en el Sistema...</h3>
+			<h3 class="h3">Beneficios de sumarte como Proveedor en el Sistema...</h3>
 			
 			<div class="contenedor2">
 				<ul>
@@ -66,7 +99,7 @@
 				</ul>
 			</div>
 
-			<h3 align="left">Por qué el desarrollo de ZapalaComercial.com.ar.</h3>
+			<h3 class="h3">Por qué el desarrollo de ZapalaComercial.com.ar.</h3>
 			<p>El desarrollo del sistema busca mejorar las políticas de ofrecimiento de Productos y/o Servicios a 
 			   consumidores de la ciudad para así dar respuesta a Negocios y Emprendimientos locales en cuanto a la 
 			   necesidad de poder comercializar dentro del contexto de la Cuarentena Obligatoria.  Uno de los 
@@ -74,6 +107,10 @@
 			   personas para las entregas.
 			</p>
 		</div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> mohito2
 	</main>
 
 	<?php include_once('footer.php'); ?>

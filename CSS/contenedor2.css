@@ -5,6 +5,7 @@
     margin: auto;
     width: 50%;
     height: 120px;
+    margin-left: 200px;
     
 }
 .contenedor2{
@@ -35,17 +36,32 @@
 .contenedor2 p{
     text-align: justify;
     margin: 7px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin: 1%;
 }
-h1 h2 h3 {
-    color: rgb(255, 255, 255);
+.h1{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin: 2%;
+}
+.h2{
+    color: rgb(0, 0, 0);
+    text-align: left;
+    margin: 2%;
+    display: inline-block;
+    
+}
+.h3{
+    color: rgb(0, 0, 0);
+    text-align: left;
+    margin: 2%
 }
 
 @media only screen and (max-width: 800px){
     .quedatecasa{
         display: block;
         margin: auto;
-        width: 100%;
+        width: 80%;
         height: 120px;
         
     }
@@ -62,13 +78,17 @@ h1 h2 h3 {
 
     }
     .contenedor2 ul li{
-        position: relative;
+        padding-left: 5px;
+        padding-right: 5px;
         width: 500px;
         float: none;
         border: 1px solid #d1d1d1;
         text-align: center;
         margin: 10px;
         border-radius: 3px;
+    }
+    h2{
+        text-align: center;
     }
 }
 
@@ -83,9 +103,10 @@ h1 h2 h3 {
     .contenedor2{
         max-height: 120px;
         width: 100%;
-		position: relative;
+        display: contents;
     }
     .contenedor2 ul li{
+        position: relative;
         width: 280px;
         float: left;
         border: 1px solid #d1d1d1;
