@@ -5,22 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- hojas de estilo -->
 	<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
-<<<<<<< HEAD
-	<link rel="icon" href="img/Logo.png">
-
-<title>Compra venta Zapala</title>
-</head>
-
-<body>
-	<?php include_once('header.php'); ?>
-	<span class="linea"></span>
-	<main class="main" style="text-align: justify">
-		<div class="contenedor">
-			<img class="quedatecasa" src="img/quedateencasa.jpg" alt="">
-			<h1 color="#ooo" align="center">Sitio Bajo Construcción.</h1>
-			<h2 align="center">Bienvenidos a ZapalaComercial.com.ar</h2>
-			<h3 align="left">A quién va dirigido...</h3>
-=======
 
 	<link rel="icon" href="img/Logo.png" type="img/text/png"/>
 
@@ -51,7 +35,6 @@
 			<h1 class="h1">Sitio Bajo Construcción.</h1>
 			<h2 class="h2">Bienvenidos a ZapalaComercial.com.ar donde todos podemos ser parte.</h2>
 			<h3 class="h3">A quién va dirigido...</h3>
->>>>>>> mohito2
 		
 			<p>Está dirigido a todos los Proveedores (Comerciantes, Productores Locales, Feriantes y Ofrecedores de 
 			   Servicios Independientes), como así también a Consumidores de Servicios de la ciudad a formalizarse en
@@ -107,10 +90,6 @@
 			   personas para las entregas.
 			</p>
 		</div>
-<<<<<<< HEAD
-=======
-
->>>>>>> mohito2
 	</main>
 
 	<?php include_once('footer.php'); ?>
