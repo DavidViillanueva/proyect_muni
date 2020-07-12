@@ -20,22 +20,7 @@
 
 <body background="img/fondoazul2.png">
 	
-	<header class="header">
-		
-		 <div class="contenedor logo_nav_contenedor">
-			<img src="img/logozapala.png">
-			 <span class="menu-icon">Ver Menu</span>
-			<nav class="navegador">
-				<ul>
-					<li><a href="Indexs.php">Inicio</a></li>
-					<li><a href="html/galeria.html">Galeria</a></li>
-					<li><a href="comercios.php">Comercios</a></li>
-					<li><a href="login.php">Login</a></li>
-					<li><a href="registrarse.php">Registrate</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+	<?php include_once('header.php'); ?>
 	<main class="main">
 		
 		<div class="buscador content-select">
@@ -85,6 +70,7 @@
 				</ul>
 			</div>
 	</main>
+	<?php include_once('footer.php'); ?>
 </body>
 </html>
 <script type="text/javascript">
