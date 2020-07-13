@@ -34,7 +34,7 @@
 			</div>
 			<div class="quedatecasa"><h1>Sitio Bajo Construcción.</h1></div>
 			<h2 class="h2">Bienvenidos a zapalacomercial.com.ar donde todos podemos ser parte.</h2>
-			<h3 class="h3">A quién va dirigido...</h3>
+			<h3 class="h3">A quién va dirigido....</h3>
 		
 			<p>Está dirigido a todos los Proveedores (Comerciantes, Productores Locales, Feriantes y Ofrecedores de 
 			   Servicios Independientes), como así también a Consumidores de Servicios de la ciudad a formalizarse en
