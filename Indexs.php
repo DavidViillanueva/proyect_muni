@@ -21,7 +21,7 @@
 </head>
 
 
-<body>	
+<body background="img/paint.jpg">	
 	
 	<?php include_once('header.php'); ?>
 
@@ -30,10 +30,10 @@
 		<div class="contenedor">
 		
 			<div>
-				<img class="quedatecasa" src="img/quedateencasa.jpg" alt="">
+				<img class="quedatecasa" src="img/quedateencasa2.png" alt="">
 			</div>
-			<h1 class="h1">Sitio Bajo Construcción.</h1>
-			<h2 class="h2">Bienvenidos a ZapalaComercial.com.ar donde todos podemos ser parte.</h2>
+			<div class="quedatecasa"><h1>Sitio Bajo Construcción.</h1></div>
+			<h2 class="h2">Bienvenidos a zapalacomercial.com.ar donde todos podemos ser parte.</h2>
 			<h3 class="h3">A quién va dirigido...</h3>
 		
 			<p>Está dirigido a todos los Proveedores (Comerciantes, Productores Locales, Feriantes y Ofrecedores de 
