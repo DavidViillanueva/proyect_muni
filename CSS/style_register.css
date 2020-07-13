@@ -53,6 +53,7 @@ body{
 
 
 .register_block .content h3{
+    font-size: 1.35rem;
     color: #7a7a7a;
     text-align: center;
     text-decoration: underline;
@@ -105,6 +106,13 @@ body{
     margin-left: 10px;
 }
 
+.register_block select{
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 25px;
+}
 .register_block input[type="date"]{
     font-size: 15px;
 }
@@ -129,6 +137,12 @@ body{
     position: relative;
 }
 
+.register_block textarea{
+    width: 100%;
+    resize: none;
+    padding: 5px;
+}
+
 /* para registro ubicacion */
 .register_block .localidad{
     display: flex;
@@ -143,7 +157,38 @@ body{
     background: #b6ce00;
     cursor: pointer;
 }
-
+.input_editado {
+    color: transparent;
+  }
+  .input_editado::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .input_editado::before {
+    content: 'Seleccionar archivos';
+    color: black;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+  }
+  .input_editado:hover::before {
+    border-color: black;
+  }
+  .input_editado:active {
+    outline: 0;
+  }
+  .input_editado:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+  }
+  
 @media(max-width: 1500px){
     .register_block{
         transform: translate(-50%,0);
@@ -190,5 +235,23 @@ body{
 
     .register_block .localidad{
         display: block
+    }
+    .register_block textarea{
+        width: 99%;
+        height: unset;
+    }
+    .register_block select{
+        width: 99%;
+    }
+
+    .register_block input[type="text"],
+    .register_block input[type="password"],
+    .register_block input[type="email"],
+    .register_block input[type="number"],
+    .register_block input[type="date"],
+    .register_block input[type="tel"],
+    .register_block input[type="mail"]
+    {
+        width: 99%;
     }
 }

@@ -1,0 +1,5 @@
+✔ cargar el archivo al servidor @done (3/7/2020 18:02:17)
+✔ leerlo desde otro php @done (3/7/2020 20:55:38)
+☐ subirlo a la base usando una funcion
+✔ crear la funcion de subida a un solo archivo @done (3/7/2020 20:55:32)
+☐ subir un comercio

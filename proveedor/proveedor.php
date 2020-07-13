@@ -66,7 +66,7 @@
                 }
                 return $db->lastInsertId();
             }else{
-                echo('error');
+                echo('error cargando proveedor');
                 return false;
             }
         }
@@ -137,7 +137,7 @@
                 return true;
             }catch(PDOException $ex){
                 return false;
-                echo($ex->getMessage());
+                echo('uploadComercio'.$ex->getMessage());
             }
         }
     }
@@ -154,16 +154,12 @@
         private $matricula = null;
         private $categoria_servicio = null;
         private $descripcion = null;
-        private $logo_bin = null;
-        private $tipo_logo = null;
 
-        function __construct($nombre,$matricula,$categoria_servicio,$descripcion,$logo_bin,$tipo_logo){
+        function __construct($nombre,$matricula,$categoria_servicio,$descripcion){
             $this->nombre = $nombre;
             $this->matricula = $matricula;
             $this->categoria_servicio = $categoria_servicio;
             $this->descripcion = $descripcion;
-            $this->logo_bin = $logo_bin;
-            $this->tipo_logo = $tipo_logo;
         }
 
         public function getServicio(){
@@ -190,22 +186,20 @@
             if($this->nombre != null && $this->matricula != null && $this->categoria_servicio != null &&  $this->descripcion != null &&
                 $this->logo_bin != null && $this->tipo_logo != null){
                 try{
-                    $dbq = $db->prepare("INSERT INTO servicio (id_proveedor,id_categoria_servicio,matricula,nombre_fantacia,imagen,tipo_imagen)
-                            VALUES (:id_proveedor,:id_categoria_servicio,:matricula,:nombre_fantacia,:imagen,:tipo_imagen)");
+                    $dbq = $db->prepare("INSERT INTO servicio (id_proveedor,id_categoria_servicio,matricula,nombre_fantacia)
+                            VALUES (:id_proveedor,:id_categoria_servicio,:matricula,:nombre_fantacia)");
                     $dbq->execute(array(
                         ":id_proveedor"=>$id_proveedor,
                         ":id_categoria_servicio"=>$this->categoria_servicio,
                         ":matricula"=>$this->matricula,
                         ":nombre_fantacia"=>$this->nombre,
-                        ":imagen"=>$this->logo_bin,
-                        ":tipo_imagen"=>$this->tipo_logo
                     ));
                 }catch(PDOException $ex){
-                    echo($ex->getMessage());
+                    echo('upload servicio error'.$ex->getMessage());
                 }
                 return $db->lastInsertId();
             }else{
-                echo('error');
+                echo('error Upload Servicio');
                 return false;
             }
         }
