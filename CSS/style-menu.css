@@ -22,10 +22,13 @@ header a{
 }
 
 .contenedor .logo{
-	background: url(../img/logozapala.png) top left no-repeat;
-	width: 260px;
-    height: 120px;
+	background: url(../img/zapalacomer.jpg) top left no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 260px;
+    height: 100px;
     margin-top: -10px;
+    object-fit: contain;
 }
 
 .navegador ul{
