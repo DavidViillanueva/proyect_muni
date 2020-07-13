@@ -1,14 +1,8 @@
 <?php
     include_once("proveedor/php/conexion.php");
-
     $provincias = $base->query("SELECT nombre,id_provincia
                             FROM provincia")->fetchAll(PDO::FETCH_ASSOC);
-    session_start();
 
-    include_once "proveeedor/proveedor.php";
-    session_start();
-    $comercio = unserialize($_SESSION['comercio']);
-    var_dump($comercio);
 ?>
 
 <!doctype html>
@@ -61,7 +55,7 @@
                             <!-- direccion -->
                             <h3>Datos de ubicacion</h3>
                             <!-- dejamos el mismo nombre por el css -->
-                            <div class="localidad"> 
+                            <div class="localidad">
                                 <label for="provin">Provincia</label>
                                 <input list="provin" name="provincia" id="provincia">
                                 <datalist id="provin">

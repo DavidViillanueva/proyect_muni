@@ -54,18 +54,6 @@
             $telefono_servicio = isset($_POST['telefono'])?$_POST['telefono']:null;
             $descripcion = isset($_POST['descripcion'])?$_POST['descripcion']:null;
             // es posible que la imagen no este cargada y no deberia generar problemas
-            if($logo != null){
-                $logo = $_FILES['logo'];
-                $tmp_name = $logo['tmp_name'];
-                $file_size = $logo['size'];
-                $fp = fopen($tmp_name,'r');
-                $logo_bin = fread($fp,$file_size);
-                $tipo_logo = $logo['type'];
-                fclose($fp);
-            }else{
-                $logo_bin = null;
-                $tipo_logo = null;
-            }
 
             $proveedor = unserialize($_SESSION['proveedor']);
             try{
@@ -74,13 +62,24 @@
                 $prov = new proveedor($proveedor['cuilt'],$proveedor['rubro'],$proveedor['plocal'],$proveedor['id_usuario']);
                 $id_proveedor = $prov->uploadProveedor($base);
                 // cargamos el servicio
-                $serv = new servicio($nombre,$matricula,$categoria_servicio,$descripcion,$logo_bin,$tipo_logo);
+                $serv = new servicio($nombre,$matricula,$categoria_servicio,$descripcion);
                 $id_servicio = $serv->uploadServicio($base,$id_proveedor);
+                // cargamos el logo
+                if($logo != null){
+                    $tmp_name = $logo['tmp_name'];
+                    $file_size = $logo['size'];
+                    $fp = fopen($tmp_name,'r');
+                    $logo_bin = fread($fp,$file_size);
+                    $tipo_logo = $logo['type'];
+                    fclose($fp);
+                    uploadLogo($base,'logo_servicio','id_logo_servicio',$id_servicio,$logo_bin,$tipo_logo);
+                }
                 // cargamos las fotos (en caso de que existan)
                 if($fotos!=null){
                     uploadImages($fotos,$id_servicio,$base,"imagenes_servicio","id_servicio");
                 }
                 $base->commit();
+                session_unset('proveedor');
                 header('location: listo.php');
                 echo("bien");
             }catch(PDOException $ex){
