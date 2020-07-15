@@ -6,7 +6,7 @@
 	<!-- hojas de estilo -->
 	<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
 
-	<link rel="icon" href="img/Logo.png" type="img/text/png"/>
+	<link rel="icon" href="img/logo-small.png" type="img/text/png"/>
 
 	<link rel="stylesheet" type="text/css" href="CSS/estilos_popup.css">
 
@@ -14,7 +14,7 @@
 
 	<link rel="stylesheet" type="text/css" href="CSS/contenedor2.css">
 	
-	<link rel="icon" href="img/Logo.png">
+	
 
 
 <title>Compra venta Zapala</title>
