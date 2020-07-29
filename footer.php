@@ -14,15 +14,16 @@
             <div class="links">
                 <h4>Links Relacionados</h4>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Buscar</a></li>
+                    <li><a href="http://www.zapala.gob.ar"><img src="img/Logo.png" alt=""></a></li>
+                   
                 </ul>
             </div>
             <div class="contact">
                 <h4>Contactanos</h4>
-                <span>123456978</span>
-                <span>asda2@asdasda.com</span>
-                <a href="#"><img src="img/facebook-1.png" alt=""></a>
+                <span>Julio Argentino Roca 757</span>
+                <span>2942-423493</span>
+                <span>tese@zapala.gob.ar</span>
+                <a href="https://www.facebook.com/secretariaeducacionempleoproduccion"><img src="img/facebook-1.png" alt=""></a>
             </div>
         </div>
 	</div>
