@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/estilos_popup.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 	<link rel="stylesheet" type="text/css" href="css/comercio.css">
+	<link rel="stylesheet" type="text/css" href="css/tabla-comercio.css">
 	<link rel="icon" href="img/Logo.png" type="text/png"/>
 <title>Comercios</title>
 	<script
@@ -39,38 +40,39 @@
 			<input type="submit" value="Buscar">
 		</div>
 		<div class="comercio">
-				<ul>
-					<li>
-						<img src="img/ubicacion.jpg" alt="">
-						<p>Nombre:</p>
-						<p>Direccion:</p>
-						<p>Telefono:</p>
-						<p>Delivery:</p>
-						<input type="submit" value="ir al comercio">
-					</li>
-					<li>
-						<img src="img/imagen1.jpg" alt="">
-						<p>
-						   Publicidad para potenciar tu negocio obteniendo mayor visibilidad comercial 
-						   TOTALMENTE GRATIS.
-						</p>
-					</li>
-					<li>
-						<img src="img/imagen2.png" alt="">
-						<p>
-							Esto te permitirá mejorar la relacion con tus viejos clientes y atraer a nuevos.
-						</p>
-					</li>
-					<li>
-						<img src="img/imagen2.png" alt="">
-						<p>
-							Esto te permitirá mejorar la relacion con tus viejos clientes y atraer a nuevos.
-						</p>
-					</li>
-				</ul>
+				<table class="tabla">
+					<thead>
+						<tr>
+							<th>Foto</th>
+							<th>Nombre del Comercio</th>
+							<th>Direccion</th>
+							<th>Telefono</th>
+							<th>Delivery</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="foto" data-label="">lala</td>
+							<td data-label="Nombre del comercio">lalala</td>
+							<td data-label="Direccion">ksadjfaskyjcvkfjvbdf</td>
+							<td data-label="Telefono">54854518</td>
+							<td data-label="Delivery">si</td>
+						</tr>
+						<tr>
+							<td class="foto" data-label="">jaja</td>
+							<td data-label="Nombre del comercio">jajaja</td>
+							<td data-label="Direccion">sdkjfhsa;dfhe</td>
+							<td data-label="Telefono">8548185181</td>
+							<td data-label="Delivery">no</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 	</main>
-	<?php include_once('footer.php'); ?>
+	<div>
+		<?php include_once('footer.php'); ?>
+  	</div>
 </body>
 </html>
 <script type="text/javascript">
