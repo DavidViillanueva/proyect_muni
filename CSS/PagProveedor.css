@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+.catalogo{
+    margin:auto;
+    width: 100%;
+}
+
+.catalogo ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+.catalogo ul li{
+    width: 260px;
+    height: 250px;
+    float: left;
+    border: 2px solid #000;
+    text-align: center;
+    margin: 9px;
+    border-radius: 3px;
+}
+.catalogo ul li img{
+    border-radius: 20px;
+    width: 150px;
+    height: 140px;
+}
+.catalogo p{
+    text-align: justify;
+    margin: 7px;
+    color: rgb(0, 0, 0);
+    margin: 1%;
+}
+.h1{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin: 2%;
+}
+.h2{
+    color: rgb(0, 0, 0);
+    text-align: left;
+    margin: 2%;
+    display: inline-block;
+    
+}
+.h3{
+    color: rgb(0, 0, 0);
+    text-align: left;
+    margin: 2%
+}
+
+
+@media only screen and (max-width: 800px){
+    
+    .catalogo{
+        height: 100%;
+        position: static;
+        margin: 20px;
+		
+    }
+    .catalogo ul{
+        list-style: none;
+        padding: 0px;
+        width: 90px;
+
+    }
+    .catalogo ul li{
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 500px;
+        float: none;
+        border: 1px solid #d1d1d1;
+        text-align: center;
+        margin: 10px;
+        border-radius: 3px;
+    }
+    h2{
+        text-align: center;
+    }
+    .posfooter{
+        text-align: center;
+        width: 100%;
+        bottom: 0;
+        position:relative;
+     }
+}
+
+@media only screen and (max-width: 450px){
+    .catalogo{
+        max-height: 120px;
+        width: 100%;
+        display: contents;
+    }
+    .catalogo ul li{
+        position: relative;
+        width: 280px;
+        float: left;
+        border: 1px solid #d1d1d1;
+        text-align: center;
+        margin: 9px;
+        border-radius: 3px;
+    }
+    .posfooter{
+        text-align: center;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+     }
+}
