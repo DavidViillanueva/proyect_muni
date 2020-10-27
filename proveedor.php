@@ -23,62 +23,66 @@
 	
     <?php include_once('header.php'); ?>
         <main>
+            <div class="datos">
+                <img src="img/ubicacion.jpg" alt="">
+                
+            </div>
+            <div>
+            <p>Nombre del comercio</p>  
+                <p>Direccion:</p>
+                <p>Correo:</p>
+                <p>Telefono:</p>
+                <p>Delivery (si/no)</p>
+            </div>    
             <div class="catalogo">
 				<ul>
 					<li>
 						<img src="img/ubicacion.jpg" alt="">
-						<p>
-						   Búsqueda por cercanía, 
-						   encontrar de manera sencilla productos y/o servicios. 
-                            <<input name="" id="" class="btn btn-primary" type="button" value="agregar">
-						</p>
+                        <p>Producto:</p>
+                        <p>Precio:</p>
+                        <input name="" id="" class="btn btn-primary" type="button" value="agregar">
 					</li>
 					<li>
 						<img src="img/imagen1.jpg" alt="">
-						<p>
-						   Publicidad para potenciar tu negocio obteniendo mayor visibilidad comercial 
-						   TOTALMENTE GRATIS.
-						</p>
+						<p>Producto:</p>
+                        <p>Precio:</p>
+                        <input name="" id="" class="btn btn-primary" type="button" value="agregar">
 					</li>
 					<li>
 						<img src="img/imagen2.png" alt="">
-						<p>
-							Esto te permitirá mejorar la relacion con tus viejos clientes y atraer a nuevos.
-						</p>
+						<p>Producto:</p>
+                        <p>Precio:</p>
+                        <input name="" id="" class="btn btn-primary" type="button" value="agregar">
                     </li>
                     <li>
 						<img src="img/ubicacion.jpg" alt="">
-						<p>
-						   Búsqueda por cercanía, 
-						   encontrar de manera sencilla productos y/o servicios. 
-
-						</p>
+						<p>Producto:</p>
+                        <p>Precio:</p>
+                        <input name="" id="" class="btn btn-primary" type="button" value="agregar">
 					</li>
 					<li>
 						<img src="img/imagen1.jpg" alt="">
-						<p>
-						   Publicidad para potenciar tu negocio obteniendo mayor visibilidad comercial 
-						   TOTALMENTE GRATIS.
-						</p>
+						<p>Producto:</p>
+                        <p>Precio:</p>
+                        <input name="" id="" class="btn btn-primary" type="button" value="agregar">
 					</li>
 					<li>
 						<img src="img/imagen2.png" alt="">
-						<p>
-							Esto te permitirá mejorar la relacion con tus viejos clientes y atraer a nuevos.
-						</p>
+						<p>Producto:</p>
+                        <p>Precio:</p>
+                        <input name="" id="" class="btn btn-primary" type="button" value="agregar">
                     </li>
                     <li>
 						<img src="img/imagen1.jpg" alt="">
-						<p>
-						   Publicidad para potenciar tu negocio obteniendo mayor visibilidad comercial 
-						   TOTALMENTE GRATIS.
-						</p>
+						<p>Producto:</p>
+                        <p>Precio:</p>
+                        <input name="" id="" class="btn btn-primary" type="button" value="agregar">
 					</li>
 					<li>
 						<img src="img/imagen2.png" alt="">
-						<p>
-							Esto te permitirá mejorar la relacion con tus viejos clientes y atraer a nuevos.
-						</p>
+						<p>Producto:</p>
+                        <p>Precio:</p>
+                        <input name="" id="" class="btn btn-primary" type="button" value="agregar">
 					</li>
 				</ul>
             </div>
